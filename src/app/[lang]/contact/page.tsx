@@ -33,83 +33,81 @@ export default async function ContactPage({ params }: PageProps) {
           }
         />
 
-        <section className="bg-white px-6 py-20">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-3">
-            <article className="rounded-2xl border border-gray-200 bg-gray-50 p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-xl font-bold text-white">
-                1
-              </div>
+<section className="bg-white px-6 py-20">
+  <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
+    <div>
+      <p className="font-bold uppercase tracking-widest text-orange-500">
+        {isFr ? "Nous rendre visite" : "Visit Us"}
+      </p>
 
-              <h2 className="mt-5 text-2xl font-bold text-blue-950">
-                {isFr ? "Téléphone" : "Phone"}
-              </h2>
+      <h2 className="mt-3 text-4xl font-bold text-blue-950">
+        {isFr
+          ? "Retrouvez-nous à Bertoua"
+          : "Find us in Bertoua"}
+      </h2>
 
-              <div className="mt-5 space-y-3 text-gray-600">
-                <p>
-                  <a
-                    href="tel:+237653844866"
-                    className="transition hover:text-orange-600"
-                  >
-                    +237 653 844 866
-                  </a>
-                </p>
+      <p className="mt-5 leading-8 text-gray-600">
+        {isFr
+          ? "Le Groupe Scolaire Bilingue CHARIS est situé au quartier Mont Cameroun, à environ 500 mètres de la Délégation Régionale du Tourisme."
+          : "Groupe Scolaire Bilingue CHARIS is located in the Mont Cameroun neighbourhood, approximately 500 metres from the Regional Delegation of Tourism."}
+      </p>
 
-                <p>
-                  <a
-                    href="tel:+237672087991"
-                    className="transition hover:text-orange-600"
-                  >
-                    +237 672 087 991
-                  </a>
-                </p>
+      <div className="mt-7 rounded-2xl bg-blue-50 p-6">
+        <p className="font-bold text-blue-950">
+          Groupe Scolaire Bilingue CHARIS
+        </p>
 
-                <p>
-                  <a
-                    href="tel:+237697028411"
-                    className="transition hover:text-orange-600"
-                  >
-                    +237 697 028 411
-                  </a>
-                </p>
-              </div>
-            </article>
+        <p className="mt-3 leading-7 text-gray-600">
+          {isFr
+            ? "Quartier Mont Cameroun, Bertoua, Région de l’Est, Cameroun"
+            : "Mont Cameroun neighbourhood, Bertoua, East Region, Cameroon"}
+        </p>
 
-            <article className="rounded-2xl border border-gray-200 bg-gray-50 p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-xl font-bold text-white">
-                2
-              </div>
+        <p className="mt-3 font-semibold text-orange-600">
+          4.565200, 13.69698
+        </p>
+      </div>
 
-              <h2 className="mt-5 text-2xl font-bold text-blue-950">
-                {isFr ? "Adresse électronique" : "Email"}
-              </h2>
+      <div className="mt-7 flex flex-wrap gap-4">
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=4.565200,13.69698"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-lg bg-blue-950 px-6 py-3 font-bold text-white transition hover:bg-blue-900"
+        >
+          {isFr
+            ? "Obtenir l’itinéraire"
+            : "Get Directions"}
+        </a>
 
-              <p className="mt-5 break-words text-gray-600">
-                <a
-                  href="mailto:gsbcharis2024@gmail.com"
-                  className="transition hover:text-orange-600"
-                >
-                  gsbcharis2024@gmail.com
-                </a>
-              </p>
-            </article>
+        <a
+          href="https://wa.me/237653844866"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-lg border-2 border-blue-950 px-6 py-3 font-bold text-blue-950 transition hover:bg-blue-950 hover:text-white"
+        >
+          WhatsApp
+        </a>
+      </div>
+    </div>
 
-            <article className="rounded-2xl border border-gray-200 bg-gray-50 p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-xl font-bold text-white">
-                3
-              </div>
-
-              <h2 className="mt-5 text-2xl font-bold text-blue-950">
-                {isFr ? "Localisation" : "Location"}
-              </h2>
-
-              <p className="mt-5 leading-7 text-gray-600">
-                {isFr
-                  ? "Quartier Mont Cameroun, à environ 500 mètres de la Délégation Régionale du Tourisme, Bertoua, Cameroun."
-                  : "Mont Cameroun neighbourhood, approximately 500 metres from the Regional Delegation of Tourism, Bertoua, Cameroon."}
-              </p>
-            </article>
-          </div>
-        </section>
+    <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+      <iframe
+        title={
+          isFr
+            ? "Localisation du Groupe Scolaire Bilingue CHARIS"
+            : "Location of Groupe Scolaire Bilingue CHARIS"
+        }
+        src="https://www.google.com/maps?q=4.565200,13.69698&z=16&output=embed"
+        width="100%"
+        height="420"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="block min-h-[420px] w-full border-0"
+      />
+    </div>
+  </div>
+</section>
 
         <section className="bg-gray-100 px-6 py-20">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
