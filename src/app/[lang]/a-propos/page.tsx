@@ -151,8 +151,8 @@ export default async function AboutPage({ params }: PageProps) {
 
                 <h2 className="mt-4 text-3xl font-bold text-blue-950">
                   {isFr
-                    ? "Contribuer à former 100 000 leaders d’ici 2045"
-                    : "Contributing to the development of 100,000 leaders by 2045"}
+                    ? "Contribuer à former 10 000 leaders d’ici 2045"
+                    : "Contributing to the development of 10,000 leaders by 2045"}
                 </h2>
               </article>
             </div>
