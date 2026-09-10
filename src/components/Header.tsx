@@ -15,7 +15,8 @@ export default function Header({ lang }: HeaderProps) {
     { fr: "Admissions", en: "Admissions", href: "/admissions" },
     { fr: "Vie scolaire", en: "School Life", href: "/vie-scolaire" },
     { fr: "Événements", en: "Events", href: "/evenements" },
-    { fr: "Galerie", en: "Gallery", href: "/galerie" },
+    { fr: "Actualités", en: "News", href: "/actualites" },
+    { fr: "Galerie", en: "Gallery", href: "/gallery" },
     { fr: "Contact", en: "Contact", href: "/contact" },
   ];
 
