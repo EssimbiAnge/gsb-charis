@@ -13,8 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Groupe Scolaire Bilingue CHARIS",
-  description: "Transformer les communautés par l'éducation",
+  metadataBase: new URL("https://gsb-charis.vercel.app"),
+  title: {
+    default: "Groupe Scolaire Bilingue CHARIS",
+    template: "%s — Groupe Scolaire Bilingue CHARIS",
+  },
+  description:
+    "Une éducation bilingue qui développe les compétences académiques, la droiture, la pensée critique, la collaboration et la capacité à apporter des solutions.",
+
+  authors: [{ name: "Thièrry Ntoh" }],
+
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
