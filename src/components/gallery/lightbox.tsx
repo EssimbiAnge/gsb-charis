@@ -240,7 +240,7 @@ export function Lightbox({
             >
               {" "}
               <p className="mx-auto max-w-2xl rounded-full bg-black/50 px-4 py-2 text-sm text-white">
-                {item.src}
+                {item.alt}
               </p>
             </div>
           )}

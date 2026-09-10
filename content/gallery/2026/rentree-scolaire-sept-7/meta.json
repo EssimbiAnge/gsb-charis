@@ -1,148 +1,358 @@
 {
-  "title": "School Reopening",
+  "title": "Rentree Scolaire 2026/2027",
   "slug": "rentree-scolaire-sept-7",
   "date": "2026-09-07",
-  "category": "Academics",
-  "coverImage": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_11.webp",
+  "category": "School Life",
+  "coverImage": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5783.webp",
   "items": [
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_1.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5813.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_10.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5831.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_11.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5844.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_12.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5848.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_13.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5887.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_14.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5890.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_15.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5893.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_16.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5895.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_17.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5901.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_18.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5911.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_19.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5922.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_2.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5924.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_20.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5931.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_21.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5946.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_22.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5949.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_23.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5957.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_24.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5971.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_25.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5973.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_26.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5975.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_27.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5977.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_28.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_5993.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_3.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_6005.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_4.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_6011.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_5.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5767.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_6.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5768.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_7.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5777.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_8.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5780.webp",
       "alt": "TODO"
     },
     {
       "type": "image",
-      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/rentree_9.webp",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5781.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5783.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5784.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5787.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5788.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5789.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5790.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5794.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5796.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5800.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5802.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5805.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5806.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5811.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5812.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5815.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5818.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5820.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5824.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5825.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5826.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5830.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5834.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5836.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5838.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5839.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5846.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5849.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5851.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5855.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5857.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5858.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5859.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5863.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5864.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5866.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5867.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5869.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5874.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5875.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5905.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5916.webp",
+      "alt": "TODO"
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-scolaire-sept-7/IMG_E5980.webp",
       "alt": "TODO"
     }
   ]
