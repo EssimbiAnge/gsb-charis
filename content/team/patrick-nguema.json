@@ -1,0 +1,21 @@
+{
+  "slug": "patrick-nguema",
+  "name": "Mr. Patrick Nguema",
+  "group": "teacher",
+  "roleTitle": {
+    "en": "CM1 Teacher",
+    "fr": "Titulaire CM1"
+  },
+  "photo": "https://i.pravatar.cc/400?img=15",
+  "bio": {
+    "en": "Prepares pupils for upper-primary work with a focus on French and mathematics.",
+    "fr": "Prépare les élèves au cycle supérieur du primaire, avec un accent sur le français et les mathématiques."
+  },
+  "contacts": [
+    {
+      "type": "email",
+      "value": "p.nguema@charisschool.cm"
+    }
+  ],
+  "order": 4
+}

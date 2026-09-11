@@ -1,10 +1,6 @@
 import { z } from "zod";
+import { localizedStringSchema } from "@/lib/i18n/localize";
 
-/** A string with both required language versions. */
-export const localizedStringSchema = z.object({
-  en: z.string().min(1),
-  fr: z.string().min(1),
-});
 
 /** A photo. Lazy-loaded natively by `next/image` — no special gating needed. */
 const imageItemSchema = z.object({

@@ -1,0 +1,21 @@
+{
+  "slug": "vincent-ayuk",
+  "name": "Mr. Vincent Ayuk",
+  "group": "teacher",
+  "roleTitle": {
+    "en": "Class 3 Teacher",
+    "fr": "Titulaire Class 3"
+  },
+  "photo": "https://i.pravatar.cc/400?img=22",
+  "bio": {
+    "en": "Builds pupils' confidence in English composition and introduces basic geography and history.",
+    "fr": "Renforce la confiance des élèves en rédaction anglaise et initie à la géographie et l'histoire."
+  },
+  "contacts": [
+    {
+      "type": "email",
+      "value": "v.ayuk@charisschool.cm"
+    }
+  ],
+  "order": 8
+}

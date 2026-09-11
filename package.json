@@ -8,8 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-        "gallery:scaffold": "tsx src/scripts/gallery/scaffold-meta.ts"
-
+    "gallery:scaffold": "tsx src/scripts/gallery/scaffold-meta.ts",
+    "team:seed": "tsx src/scripts/team/seed-dummy-data.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1127.0",

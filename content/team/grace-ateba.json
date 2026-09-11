@@ -1,0 +1,21 @@
+{
+  "slug": "grace-ateba",
+  "name": "Mrs. Grace Ateba",
+  "group": "teacher",
+  "roleTitle": {
+    "en": "CP Teacher",
+    "fr": "Titulaire CP"
+  },
+  "photo": "https://i.pravatar.cc/400?img=25",
+  "bio": {
+    "en": "Guides CP pupils through their first steps in reading, writing, and numeracy.",
+    "fr": "Accompagne les élèves de CP dans leurs premiers pas en lecture, écriture et calcul."
+  },
+  "contacts": [
+    {
+      "type": "email",
+      "value": "g.ateba@charisschool.cm"
+    }
+  ],
+  "order": 1
+}

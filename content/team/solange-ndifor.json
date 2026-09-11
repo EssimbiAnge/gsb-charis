@@ -1,0 +1,21 @@
+{
+  "slug": "solange-ndifor",
+  "name": "Mrs. Solange Ndifor",
+  "group": "staff",
+  "roleTitle": {
+    "en": "School Nurse",
+    "fr": "Infirmière Scolaire"
+  },
+  "photo": "https://i.pravatar.cc/400?img=29",
+  "bio": {
+    "en": "Provides first aid and health monitoring for pupils and staff throughout the school day.",
+    "fr": "Assure les premiers soins et le suivi de la santé des élèves et du personnel durant la journée."
+  },
+  "contacts": [
+    {
+      "type": "email",
+      "value": "s.ndifor@charisschool.cm"
+    }
+  ],
+  "order": 4
+}

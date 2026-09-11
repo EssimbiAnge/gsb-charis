@@ -1,0 +1,21 @@
+{
+  "slug": "paul-etoa",
+  "name": "Mr. Paul Etoa",
+  "group": "staff",
+  "roleTitle": {
+    "en": "IT Support",
+    "fr": "Support Informatique"
+  },
+  "photo": "https://i.pravatar.cc/400?img=33",
+  "bio": {
+    "en": "Maintains the school's computer lab and technical equipment across all departments.",
+    "fr": "Entretient le laboratoire informatique et le matériel technique de tous les départements."
+  },
+  "contacts": [
+    {
+      "type": "email",
+      "value": "p.etoa@charisschool.cm"
+    }
+  ],
+  "order": 1
+}

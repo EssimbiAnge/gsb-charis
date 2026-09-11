@@ -35,18 +35,33 @@ export default function Footer({ lang }: FooterProps) {
           </h3>
 
           <ul className="space-y-2 text-slate-300">
-            <li><Link href={`/${lang}`}>{isFr ? "Accueil" : "Home"}</Link></li>
-            <li><Link href={`/${lang}/a-propos`}>{isFr ? "À propos" : "About"}</Link></li>
-            <li><Link href={`/${lang}/admissions`}>Admissions</Link></li>
-            <li><Link href={`/${lang}/contact`}>{isFr ? "Contact" : "Contact"}</Link></li>
+            <li>
+              <Link href={`/${lang}`}>{isFr ? "Accueil" : "Home"}</Link>
+            </li>
+            <li>
+              <Link href={`/${lang}/a-propos`}>
+                {isFr ? "À propos" : "About"}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${lang}/admissions`}>Admissions</Link>
+            </li>
+            <li>
+              <Link href={`/${lang}/actualites`}>
+                {isFr ? "Actualités" : "News and Events"}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${lang}/contact`}>
+                {isFr ? "Contact" : "Contact"}
+              </Link>
+            </li>
           </ul>
         </div>
 
         {/* Contact */}
         <div>
-          <h3 className="mb-4 font-bold">
-            {isFr ? "Contact" : "Contact"}
-          </h3>
+          <h3 className="mb-4 font-bold">{isFr ? "Contact" : "Contact"}</h3>
 
           <p className="text-slate-300">gsbcharis2024@gmail.com</p>
           <p className="text-slate-300">+237 653 844 866</p>
@@ -56,9 +71,7 @@ export default function Footer({ lang }: FooterProps) {
 
         {/* Localisation */}
         <div>
-          <h3 className="mb-4 font-bold">
-            {isFr ? "Adresse" : "Location"}
-          </h3>
+          <h3 className="mb-4 font-bold">{isFr ? "Adresse" : "Location"}</h3>
 
           <p className="text-slate-300">
             Mont Cameroun
@@ -72,9 +85,7 @@ export default function Footer({ lang }: FooterProps) {
 
       <div className="border-t border-slate-800 py-5 text-center text-sm text-slate-400">
         © {new Date().getFullYear()} Groupe Scolaire Bilingue CHARIS.{" "}
-        {isFr
-          ? "Tous droits réservés."
-          : "All rights reserved."}
+        {isFr ? "Tous droits réservés." : "All rights reserved."}
       </div>
     </footer>
   );

@@ -1,0 +1,21 @@
+{
+  "slug": "irene-fomba",
+  "name": "Mrs. Irene Fomba",
+  "group": "administration",
+  "roleTitle": {
+    "en": "Administrative Coordinator",
+    "fr": "Coordinatrice Administrative"
+  },
+  "photo": "https://i.pravatar.cc/400?img=45",
+  "bio": {
+    "en": "Manages enrollment, records, and day-to-day administrative operations for the school.",
+    "fr": "Gère les inscriptions, les dossiers et les opérations administratives quotidiennes de l'école."
+  },
+  "contacts": [
+    {
+      "type": "email",
+      "value": "i.fomba@charisschool.cm"
+    }
+  ],
+  "order": 2
+}

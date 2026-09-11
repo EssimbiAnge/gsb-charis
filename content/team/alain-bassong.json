@@ -1,0 +1,21 @@
+{
+  "slug": "alain-bassong",
+  "name": "Mr. Alain Bassong",
+  "group": "staff",
+  "roleTitle": {
+    "en": "Facilities Manager",
+    "fr": "Responsable des Infrastructures"
+  },
+  "photo": "https://i.pravatar.cc/400?img=53",
+  "bio": {
+    "en": "Keeps classrooms, grounds, and equipment in working order across the whole complex.",
+    "fr": "Veille au bon état des salles de classe, des espaces et des équipements de tout le complexe."
+  },
+  "contacts": [
+    {
+      "type": "email",
+      "value": "a.bassong@charisschool.cm"
+    }
+  ],
+  "order": 5
+}

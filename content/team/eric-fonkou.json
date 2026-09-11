@@ -1,0 +1,21 @@
+{
+  "slug": "eric-fonkou",
+  "name": "Mr. Eric Fonkou",
+  "group": "teacher",
+  "roleTitle": {
+    "en": "CE1 Teacher",
+    "fr": "Titulaire CE1"
+  },
+  "photo": "https://i.pravatar.cc/400?img=14",
+  "bio": {
+    "en": "Builds on early literacy skills while introducing pupils to basic science concepts.",
+    "fr": "Renforce les compétences de base en lecture tout en initiant les élèves aux sciences."
+  },
+  "contacts": [
+    {
+      "type": "email",
+      "value": "e.fonkou@charisschool.cm"
+    }
+  ],
+  "order": 2
+}
