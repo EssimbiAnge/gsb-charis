@@ -7,6 +7,7 @@ import type { MediaItem } from "@/lib/gallery/types";
 import { Locale } from "@/lib/news/types";
 import Header from "../Header";
 import PageHero from "../PageHero";
+import { articleCategories } from "@/lib/types";
 
 /** Props for {@link EventGalleryClient}. */
 export interface EventGalleryClientProps {
@@ -14,6 +15,7 @@ export interface EventGalleryClientProps {
   items: MediaItem[];
   lang: Locale;
   date: string;
+  category: string;
   itemCount: number;
 }
 
@@ -27,6 +29,7 @@ export function EventGalleryClient({
   items,
   lang,
   date,
+  category,
   itemCount,
 }: EventGalleryClientProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -47,7 +50,9 @@ export function EventGalleryClient({
 
       <main>
         <PageHero
-          eyebrow={`${itemCount} ${
+          eyebrow={`${
+            articleCategories.find((c) => c.slug === category)?.name[lang]
+          } · ${itemCount} ${
             itemCount === 1 ? "item" : "items"
           } · ${dateLabel}`}
           title={title}
@@ -59,6 +64,7 @@ export function EventGalleryClient({
               <MediaTile
                 key={i}
                 item={item}
+                locale={lang}
                 onSelect={() => setSelectedIndex(i)}
               />
             ))}
@@ -66,6 +72,7 @@ export function EventGalleryClient({
           <Lightbox
             items={items}
             selectedIndex={selectedIndex}
+            locale={lang}
             onClose={() => setSelectedIndex(null)}
             onNavigate={setSelectedIndex}
           />

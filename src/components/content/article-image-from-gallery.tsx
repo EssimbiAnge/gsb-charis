@@ -1,5 +1,7 @@
 import { getGalleryItem } from "@/lib/gallery/get-items";
 import { ArticleImage } from "./article-image";
+import { localize } from "@/lib/i18n/localize";
+import { Locale } from "@/lib/news/types";
 
 /**
  * Pulls a single image from an existing gallery event's `meta.json` and
@@ -9,13 +11,14 @@ import { ArticleImage } from "./article-image";
 export async function ArticleImageFromGallery({
   event,
   file,
-  caption,
+  caption,locale
 }: {
   /** `"<year>/<slug>"` of the gallery event, e.g. "2026/rentree-scolaire-sept-7". */
   event: string;
   /** Filename within that event, e.g. "prep_1.webp". */
   file: string;
   caption?: string;
+  locale: Locale;
 }) {
   const [year, slug] = event.split("/");
   const item = await getGalleryItem(year, slug, file);
@@ -31,5 +34,11 @@ export async function ArticleImageFromGallery({
     );
   }
 
-  return <ArticleImage src={item.src} alt={item.alt} caption={caption} />;
+  return (
+    <ArticleImage
+      src={item.src}
+      alt={localize(item.alt, locale)}
+      caption={caption}
+    />
+  );
 }

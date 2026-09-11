@@ -1,10 +1,16 @@
 import { z } from "zod";
 
+/** A string with both required language versions. */
+export const localizedStringSchema = z.object({
+  en: z.string().min(1),
+  fr: z.string().min(1),
+});
+
 /** A photo. Lazy-loaded natively by `next/image` — no special gating needed. */
 const imageItemSchema = z.object({
   type: z.literal("image"),
   src: z.url(),
-  alt: z.string().min(1),
+  alt: localizedStringSchema,
   orientation: z.enum(["landscape", "portrait"]).optional(),
 });
 
@@ -16,7 +22,7 @@ const gifItemSchema = z.object({
   thumbnail: z.url(),
   /** Human-readable file size, e.g. "6.2 MB" — shown on the load button. */
   sizeLabel: z.string().min(1),
-  alt: z.string().min(1),
+  alt: localizedStringSchema,
     orientation: z.enum(["landscape", "portrait"]).default('landscape'),
 
 });
@@ -29,7 +35,7 @@ const videoItemSchema = z.object({
   thumbnail: z.url(),
   /** Human-readable file size, e.g. "24 MB" — shown on the load button. */
   sizeLabel: z.string().min(1),
-  alt: z.string().min(1),
+  alt: localizedStringSchema,
     orientation: z.enum(["landscape", "portrait"]).default('landscape'),
 
 });
@@ -43,9 +49,17 @@ export const mediaItemSchema = z.discriminatedUnion("type", [
 export type MediaItem = z.infer<typeof mediaItemSchema>;
 
 export const galleryEventSchema = z.object({
-  title: z.string().min(1),
+  title: localizedStringSchema,
   slug: z.string().min(1),
-  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+   /** Accepts loosely-formatted dates ("2026-9-4", "9/4/2026", a Date) and normalizes to YYYY-MM-DD. */
+ date: z.preprocess((val) => {
+   if (val instanceof Date) return val.toISOString().slice(0, 10);
+   if (typeof val === "string") {
+     const parsed = new Date(val);
+     if (!isNaN(parsed.getTime())) return parsed.toISOString().slice(0, 10);
+   }
+   return val;
+ }, z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "date must be YYYY-MM-DD")),
   category: z.string().default("General"),
   coverImage: z.url(),
   items: z.array(mediaItemSchema).min(1),
@@ -62,3 +76,6 @@ export interface GalleryYear {
   year: string;
   events: GalleryEventSummary[];
 }
+
+
+export type LocalizedString = z.infer<typeof localizedStringSchema>;

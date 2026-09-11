@@ -121,15 +121,15 @@ async function scaffold(year: string, slug: string) {
         src,
         thumbnail: thumbKey ? `${R2_PUBLIC_URL}/${thumbKey.key}` : "TODO",
         sizeLabel: formatSize(obj.sizeBytes),
-        alt: "TODO",
+        alt: { en: "TODO", fr: "TODO" },
       });
     } else {
-      items.push({ type, src, alt: "TODO" });
+      items.push({ type, src, alt: { en: "TODO", fr: "TODO" } });
     }
   }
 
   const meta = {
-    title: "TODO",
+    title: { en: "TODO", fr: "TODO" },
     slug,
     date: new Date().toISOString().slice(0, 10),
     category: "TODO",

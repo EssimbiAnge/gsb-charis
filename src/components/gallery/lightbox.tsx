@@ -12,6 +12,8 @@ import {
   ZoomOut,
 } from "lucide-react";
 import type { MediaItem } from "@/lib/gallery/types";
+import { Locale } from "@/lib/news/types";
+import { localize } from "@/lib/i18n/localize";
 
 /** Props for {@link Lightbox}. */
 export interface LightboxProps {
@@ -22,6 +24,7 @@ export interface LightboxProps {
   onClose: () => void;
   /** Called with the new index when the person navigates prev/next. */
   onNavigate: (index: number) => void;
+  locale: Locale;
 }
 
 const ZOOM_STEP = 1;
@@ -37,6 +40,7 @@ export function Lightbox({
   selectedIndex,
   onClose,
   onNavigate,
+  locale,
 }: LightboxProps) {
   const [loaded, setLoaded] = useState(false);
   const [zoom, setZoom] = useState(1);
@@ -155,7 +159,7 @@ export function Lightbox({
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={item.src}
-                alt={item.alt}
+                alt={localize(item.alt, locale)}
                 onClick={toggleZoom}
                 style={{
                   transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
@@ -171,7 +175,7 @@ export function Lightbox({
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={item.thumbnail}
-                  alt={item.alt}
+                  alt={localize(item.alt, locale)}
                   className="max-h-full max-w-full object-contain opacity-60"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -201,7 +205,7 @@ export function Lightbox({
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={item.src}
-                alt={item.alt}
+                alt={localize(item.alt, locale)}
                 className="max-h-full max-w-full object-contain"
               />
             )}
@@ -240,7 +244,7 @@ export function Lightbox({
             >
               {" "}
               <p className="mx-auto max-w-2xl rounded-full bg-black/50 px-4 py-2 text-sm text-white">
-                {item.alt}
+                {localize(item.alt, locale)}
               </p>
             </div>
           )}

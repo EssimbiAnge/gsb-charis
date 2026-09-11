@@ -2,11 +2,14 @@ import Image from "next/image";
 import { Play, Film } from "lucide-react";
 import type { MediaItem } from "@/lib/gallery/types";
 import { cn } from "@/lib/utils";
+import { Locale } from "@/lib/news/types";
+import { localize } from "@/lib/i18n/localize";
 
 /** Props for {@link MediaTile}. */
 export interface MediaTileProps {
   item: MediaItem;
   onSelect: () => void;
+  locale: Locale;
 }
 
 /**
@@ -14,7 +17,7 @@ export interface MediaTileProps {
  * thumbnail only — video and GIF bytes are never requested here, only
  * inside the lightbox after an explicit "play"/"load" click.
  */
-export function MediaTile({ item, onSelect }: MediaTileProps) {
+export function MediaTile({ item, onSelect, locale }: MediaTileProps) {
   const thumbnailSrc = item.type === "image" ? item.src : item.thumbnail;
 
   return (
@@ -28,7 +31,7 @@ export function MediaTile({ item, onSelect }: MediaTileProps) {
     >
       <Image
         src={thumbnailSrc}
-        alt={item.alt}
+        alt={localize(item.alt, locale)}
         width={1200}
         height={800}
         className="block h-auto w-full object-cover transition-transform duration-300 group-hover:scale-105"

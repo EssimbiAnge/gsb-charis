@@ -1,5 +1,7 @@
 import { getGalleryItems } from "@/lib/gallery/get-items";
 import { Gallery } from "./gallery";
+import { Locale } from "@/lib/news/types";
+import { localize } from "@/lib/i18n/localize";
 
 /**
  * Pulls a set of images from an existing gallery event's `meta.json` and
@@ -8,10 +10,12 @@ import { Gallery } from "./gallery";
 export async function GalleryFromEvent({
   event,
   files,
+  locale,
 }: {
   event: string;
   /** Optional ordered subset of filenames. Omit to include every image in the event. */
   files?: string[];
+  locale: Locale;
 }) {
   const [year, slug] = event.split("/");
   const items = await getGalleryItems(year, slug, files);
@@ -19,7 +23,10 @@ export async function GalleryFromEvent({
 
   return (
     <Gallery
-      images={imageItems.map((item) => ({ src: item.src, alt: item.alt }))}
+      images={imageItems.map((item) => ({
+        src: item.src,
+        alt: localize(item.alt, locale),
+      }))}
     />
   );
 }

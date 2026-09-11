@@ -27,10 +27,15 @@ export const articleFrontmatterSchema = z.object({
   excerpt: z.string().min(1),
   /** ISO date string, e.g. "2026-09-08". */
 /** Accepts either a YAML-parsed Date or a plain string, normalized to YYYY-MM-DD. */
-publishedAt: z.preprocess((val) => {
-  if (val instanceof Date) return val.toISOString().slice(0, 10);
-  return val;
-}, z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "publishedAt must be YYYY-MM-DD")),  author: z.string().default("CHARIS School"),
+ /** Accepts loosely-formatted dates ("2026-9-4", "9/4/2026", a Date) and normalizes to YYYY-MM-DD. */
+ publishedAt: z.preprocess((val) => {
+   if (val instanceof Date) return val.toISOString().slice(0, 10);
+   if (typeof val === "string") {
+     const parsed = new Date(val);
+     if (!isNaN(parsed.getTime())) return parsed.toISOString().slice(0, 10);
+   }
+   return val;
+ }, z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "date must be YYYY-MM-DD")), author: z.string().default("CHARIS School"),
   category: z.string().default("General"),
   coverImage: z.string().optional(),
   featured: z.boolean().default(false),
