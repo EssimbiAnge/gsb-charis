@@ -1,5 +1,8 @@
 {
-  "title": {"en": "Preparation for Reopening", "fr": "Préparation à la Rentree"},
+  "title": {
+    "en": "Preparation for Reopening",
+    "fr": "Préparation à la Rentree"
+  },
   "slug": "rentree-preperation-sept-5",
   "date": "2026-09-05",
   "category": "other",
@@ -8,290 +11,460 @@
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_1.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_10.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_11.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_12.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_13.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_14.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_15.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_16.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_17.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_18.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_19.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_2.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_20.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_21.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_22.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_23.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_24.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_25.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_26.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_27.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_28.webp",
-      "alt": { "en": "TODO", "fr": "TODO" },
-            "'orientation": "portrait"
-
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      },
+      "orientation": "portrait"
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_29.webp",
-      "alt": { "en": "TODO", "fr": "TODO" },
-      "'orientation": "portrait"
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      },
+      "orientation": "portrait"
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_3.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_30.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_31.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_32.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_33.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_34.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_35.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_36.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_37.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_38.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_39.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_4.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_40.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_41.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_42.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_43.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_44.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_45.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_46.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_47.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_48.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_49.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_5.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_50.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_51.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_52.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_53.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_54.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_55.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_56.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_57.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_6.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_7.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_8.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     },
     {
       "type": "image",
       "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/rentree-preperation-sept-5/prep_9.webp",
-      "alt": { "en": "TODO", "fr": "TODO" }
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
     }
   ]
 }

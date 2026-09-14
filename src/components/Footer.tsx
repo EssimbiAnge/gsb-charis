@@ -66,7 +66,13 @@ export default function Footer({ lang }: FooterProps) {
           <p className="text-slate-300">gsbcharis2024@gmail.com</p>
           <p className="text-slate-300">+237 653 844 866</p>
           <p className="text-slate-300">+237 672 087 991</p>
-          <p className="text-slate-300">+237 697 028 411</p>
+          <br />
+          <Link
+            href={"https://web.facebook.com/profile.php?id=61593872057377"}
+            className="text-slate-300 underline"
+          >
+            Facebook
+          </Link>
         </div>
 
         {/* Localisation */}

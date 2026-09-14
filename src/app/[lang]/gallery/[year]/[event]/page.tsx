@@ -14,11 +14,11 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: EventGalleryPageProps) {
-  const { year, event } = await params;
+  const { year, event, lang } = await params;
   const meta = await galleryRepository.getEvent(year, event);
   if (!meta) return {};
   return {
-    title: `${meta.title} — CHARIS Bilingual School Complex`,
+    title: `${meta.title[lang]} — CHARIS Bilingual School Complex`,
     openGraph: { images: [meta.coverImage] },
   };
 }

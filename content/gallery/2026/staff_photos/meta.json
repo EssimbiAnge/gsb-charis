@@ -1,0 +1,84 @@
+{
+  "title": {
+    "en": "Staff",
+    "fr": "Le Personnel"
+  },
+  "slug": "staff_photos",
+  "date": "2026-09-11",
+  "category": "other",
+  "coverImage": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/staff_photos/IMG_E6151.webp",
+  "items": [
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/staff_photos/IMG_E6123.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/staff_photos/IMG_E6126.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/staff_photos/IMG_E6128.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/staff_photos/IMG_E6134.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/staff_photos/IMG_E6137.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/staff_photos/IMG_E6143.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/staff_photos/IMG_E6145.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/staff_photos/IMG_E6146.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/staff_photos/IMG_E6151.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    }
+  ]
+}

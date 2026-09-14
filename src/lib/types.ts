@@ -54,9 +54,12 @@ export const articleCategories = [
       fr: "Arts, culture & sport",
     },
     // Sports, performances, creative activities, cultural projects, and competitions.
-  },{slug: "other",
-  name: {
-    en: "Other",
-    fr: "Autre",
-  },}
+  },
+  {
+    slug: "other",
+    name: {
+      en: "Other",
+      fr: "Autre",
+    },
+  },
 ] as const;

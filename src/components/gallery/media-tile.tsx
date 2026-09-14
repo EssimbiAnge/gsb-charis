@@ -25,8 +25,8 @@ export function MediaTile({ item, onSelect, locale }: MediaTileProps) {
       onClick={onSelect}
       key={item.src}
       className={cn(
-        "group relative overflow-hidden bg-[#E8E1D3]",
-        item.orientation === "portrait" && "col-span-2"
+        "group ape relative overflow-hidden bg-[#E8E1D3]",
+        item.orientation === "portrait" ? "sm:row-span-2" : ""
       )}
     >
       <Image
