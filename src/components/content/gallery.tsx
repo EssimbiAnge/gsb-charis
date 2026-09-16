@@ -4,11 +4,15 @@ import { useState } from "react";
 import Image from "next/image";
 import { Lightbox } from "@/components/gallery/lightbox";
 import type { MediaItem } from "@/lib/gallery/types";
+import { Locale } from "@/lib/news/types";
 
 /** A single image entry within a {@link Gallery}. */
 export interface GalleryImage {
   src: string;
-  alt: string;
+  alt: {
+    en: string;
+    fr: string;
+  };
 }
 
 /**
@@ -17,7 +21,13 @@ export interface GalleryImage {
  * navigation across the full set — unlike {@link ArticleImage}, which
  * opens as a single, non-navigable image.
  */
-export function Gallery({ images }: { images: GalleryImage[] }) {
+export function Gallery({
+  images,
+  locale,
+}: {
+  images: GalleryImage[];
+  locale: Locale;
+}) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const items: MediaItem[] = images.map((img) => ({ type: "image", ...img }));
 
@@ -27,13 +37,14 @@ export function Gallery({ images }: { images: GalleryImage[] }) {
         <button
           key={img.src}
           onClick={() => setSelectedIndex(i)}
-          className="relative overflow-hidden group"
+          className="relative aspect-video overflow-hidden group"
         >
           <Image
             src={img.src}
-            alt={img.alt}
-            width={1200}
-            height={800}
+            alt={img.alt[locale]}
+            // width={1200}
+            // height={800}
+            fill
             className="block h-auto w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </button>
@@ -43,6 +54,7 @@ export function Gallery({ images }: { images: GalleryImage[] }) {
         selectedIndex={selectedIndex}
         onClose={() => setSelectedIndex(null)}
         onNavigate={setSelectedIndex}
+        locale={locale}
       />
     </div>
   );

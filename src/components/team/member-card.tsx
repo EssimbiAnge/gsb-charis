@@ -1,8 +1,15 @@
 import Image from "next/image";
-import { Mail, Phone, Link as LinkIcon } from "lucide-react";
 import type { TeamMember, TeamContact } from "@/lib/team/types";
 import { localize } from "@/lib/i18n/localize";
 import type { Locale } from "@/lib/news/types";
+import { Globe, Mail, Phone } from "lucide-react";
+import {
+  SiWhatsapp,
+  SiFacebook,
+  SiInstagram,
+  SiLinkerd,
+  SiTiktok,
+} from "react-icons/si";
 
 /** Props for {@link MemberCard}. */
 export interface MemberCardProps {
@@ -10,21 +17,25 @@ export interface MemberCardProps {
   locale: Locale;
 }
 
-const CONTACT_ICON: Record<TeamContact["type"], typeof Mail> = {
+const CONTACT_ICON: Record<
+  TeamContact["type"],
+  typeof Mail | typeof SiFacebook
+> = {
   email: Mail,
   phone: Phone,
-  whatsapp: Phone,
-  facebook: LinkIcon,
-  instagram: LinkIcon,
-  linkedin: LinkIcon,
-  website: LinkIcon,
+  whatsapp: SiWhatsapp,
+  facebook: SiFacebook,
+  instagram: SiInstagram,
+  linkedin: SiLinkerd,
+  tiktok: SiTiktok,
+  website: Globe,
 };
 
 /** Resolves a contact entry to a clickable href based on its type. */
 function contactHref(contact: TeamContact): string {
   if (contact.type === "email") return `mailto:${contact.value}`;
-  if (contact.type === "phone" || contact.type === "whatsapp")
-    return `tel:${contact.value}`;
+  if (contact.type === "phone") return `tel:${contact.value}`;
+  if (contact.type === "whatsapp") return `https://wa.me/${contact.value}`;
   return contact.value;
 }
 
@@ -47,17 +58,20 @@ export function MemberCard({ member, locale }: MemberCardProps) {
         <p className="mt-0.5 text-sm text-[#4A5D48]">
           {localize(member.roleTitle, locale)}
         </p>
+        <p className="mt-0.5 text-sm text-[#4A5D48]">{`${
+          locale === "en" ? "Since" : "Depuis"
+        } ${member.tenure}`}</p>
         <p className="mt-2 text-sm text-muted-foreground line-clamp-3">
           {localize(member.bio, locale)}
         </p>
 
         {member.contacts.length > 0 && (
           <div className="mt-3 flex gap-3">
-            {member.contacts.map((contact) => {
+            {member.contacts.map((contact, idx) => {
               const Icon = CONTACT_ICON[contact.type];
               return (
                 <a
-                  key={contact.type}
+                  key={contact.type + idx}
                   href={contactHref(contact)}
                   target={
                     contact.type === "email" || contact.type === "phone"

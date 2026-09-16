@@ -1,0 +1,38 @@
+{
+  "slug": "zra-julienne",
+  "name": "Mme KOALDAMA ZRA Julienne",
+  "group": "teacher",
+  "roleTitle": {
+    "en": "SIL Teacher | French Section Head",
+    "fr": "Titulaire (SIL) / Cheffe de Section Francophone"
+  },
+  "tenure": 2021,
+  "photo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/team_profiles/mme-julienne.jpeg",
+  "bio": {
+    "fr": "Titulaire en SIL et responsable de la coordination de la section primaire francophone, elle veille au bon accompagnement des élèves et à la qualité de l’organisation pédagogique de la section.",
+    "en": "SIL teacher and coordinator of the French-speaking primary section, supporting pupils while helping ensure effective teaching and the smooth organization of the section."
+  },
+  "contacts": [
+    {
+      "type": "email",
+      "value": "juliennezra2000@gmail.com"
+    },
+    {
+      "type": "whatsapp",
+      "value": "+237698026427"
+    },
+    {
+      "type": "whatsapp",
+      "value": "+237654541188"
+    },
+    {
+      "type": "facebook",
+      "value": "https://www.facebook.com/julienne.zra.2025"
+    },
+    {
+      "type": "tiktok",
+      "value": "https://vm.tiktok.com/ZS9SnkPFDbaUM-jBhgL/"
+    }
+  ],
+  "order": 1
+}

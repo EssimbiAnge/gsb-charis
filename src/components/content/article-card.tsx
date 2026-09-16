@@ -55,6 +55,7 @@ export function ArticleCard({
             ]
           }
         </p>
+
         <h3
           className={`mt-1 font-semibold leading-snug ${
             size === "large" ? "text-2xl" : "text-lg"

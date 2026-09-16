@@ -23,9 +23,10 @@ export async function GalleryFromEvent({
 
   return (
     <Gallery
+      locale={locale}
       images={imageItems.map((item) => ({
         src: item.src,
-        alt: localize(item.alt, locale),
+        alt: item.alt,
       }))}
     />
   );

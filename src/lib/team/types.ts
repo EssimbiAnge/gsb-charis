@@ -5,7 +5,16 @@ import { localizedStringSchema } from "@/lib/i18n/localize";
 export const TEAM_GROUPS = ["administration", "teacher", "staff"] as const;
 export type TeamGroup = (typeof TEAM_GROUPS)[number];
 
-const contactTypeSchema = z.enum(["email", "phone", "whatsapp", "facebook", "instagram", "linkedin", "website"]);
+const contactTypeSchema = z.enum([
+  "email",
+  "phone",
+  "whatsapp",
+  "facebook",
+  "instagram",
+  "linkedin",
+  "tiktok",
+  "website",
+]);
 
 /** A single optional contact/social link for a team member. */
 export const teamContactSchema = z.object({
@@ -22,6 +31,7 @@ export const teamMemberSchema = z.object({
   group: z.enum(TEAM_GROUPS),
   /** e.g. "Class 3B Teacher" / "Titulaire Classe 3B". Free text, not structured class/section fields. */
   roleTitle: localizedStringSchema,
+  tenure: z.number().default(999),
   photo: z.string().url(),
   bio: localizedStringSchema,
   contacts: z.array(teamContactSchema).default([]),

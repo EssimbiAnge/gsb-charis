@@ -1,0 +1,60 @@
+{
+  "title": {
+    "en": "School life",
+    "fr": "Vie Scolaire"
+  },
+  "slug": "school-life",
+  "date": "2026-09-16",
+  "category": "TODO",
+  "coverImage": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/school-life/IMG_6200.webp",
+  "items": [
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/school-life/IMG_6200.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/school-life/IMG_6205.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/school-life/IMG_6208.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/school-life/IMG_6213.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/school-life/IMG_6218.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    },
+    {
+      "type": "image",
+      "src": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/school-life/IMG_6224.webp",
+      "alt": {
+        "en": "TODO",
+        "fr": "TODO"
+      }
+    }
+  ]
+}
