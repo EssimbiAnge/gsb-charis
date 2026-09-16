@@ -236,7 +236,7 @@ export function Lightbox({
               </div>
             )}
           {/* Caption — same alt text used for accessibility, shown as the description */}
-          {item && (
+          {/* {item && (
             <div
               className={`absolute inset-x-0 z-20 px-4 text-center ${
                 items.length > 1 ? "bottom-20 sm:bottom-6" : "bottom-6"
@@ -247,8 +247,7 @@ export function Lightbox({
                 {localize(item.alt, locale)}
               </p>
             </div>
-          )}
-          +{" "}
+          )} */}
           {/* Mobile bottom nav bar — only when there's something to navigate to */}
           {items.length > 1 && (
             <div className="absolute inset-x-0 bottom-0 z-20 flex items-center justify-center gap-6 bg-black/60 py-4 sm:hidden">
