@@ -11,7 +11,8 @@ import { Locale } from "@/lib/news/types";
 export async function ArticleImageFromGallery({
   event,
   file,
-  caption,locale
+  caption,
+  locale,
 }: {
   /** `"<year>/<slug>"` of the gallery event, e.g. "2026/rentree-scolaire-sept-7". */
   event: string;
@@ -37,8 +38,9 @@ export async function ArticleImageFromGallery({
   return (
     <ArticleImage
       src={item.src}
-      alt={localize(item.alt, locale)}
+      alt={item.alt}
       caption={caption}
+      locale={locale}
     />
   );
 }

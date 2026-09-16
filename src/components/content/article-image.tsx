@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Lightbox } from "@/components/gallery/lightbox";
 import type { MediaItem } from "@/lib/gallery/types";
+import { Locale } from "@/lib/news/types";
 
 /**
  * A responsive, optionally-captioned image for use inside article MDX
@@ -14,10 +15,15 @@ export function ArticleImage({
   src,
   alt,
   caption,
+  locale,
 }: {
   src: string;
-  alt: string;
+  alt: {
+    en: string;
+    fr: string;
+  };
   caption?: string;
+  locale: Locale;
 }) {
   const [open, setOpen] = useState(false);
   const item: MediaItem = { type: "image", src, alt };
@@ -30,7 +36,7 @@ export function ArticleImage({
       >
         <Image
           src={src}
-          alt={alt}
+          alt={alt[locale]}
           width={1200}
           height={800}
           className="block h-auto w-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -46,6 +52,7 @@ export function ArticleImage({
         selectedIndex={open ? 0 : null}
         onClose={() => setOpen(false)}
         onNavigate={() => {}}
+        locale={locale}
       />
     </figure>
   );
