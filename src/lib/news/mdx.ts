@@ -13,6 +13,8 @@ import type { ArticleRepository } from "./repository";
 
 const NEWS_DIR = path.join(process.cwd(), "content", "news");
 
+const SEVERITY_RANK = { urgent: 2, warning: 1, info: 0 } as const;
+
 /** Returns the content directory for a given locale, e.g. `content/news/en`. */
 function localeDir(locale: Locale): string {
   return path.join(NEWS_DIR, locale);
@@ -33,7 +35,9 @@ function readArticleFile(slug: string, locale: Locale) {
   const result = articleFrontmatterSchema.safeParse(data);
   if (!result.success) {
     throw new Error(
-      `Invalid frontmatter in content/news/${locale}/${slug}.mdx: ${result.error.issues.map((i) => i.message).join(", ")}`
+      `Invalid frontmatter in content/news/${locale}/${slug}.mdx: ${result.error.issues
+        .map((i) => i.message)
+        .join(", ")}`
     );
   }
 
@@ -59,7 +63,10 @@ export const mdxArticleRepository: ArticleRepository = {
   async getAll(locale, options: GetAllArticlesOptions = {}) {
     const dir = localeDir(locale);
     const slugs = fs.existsSync(dir)
-      ? fs.readdirSync(dir).filter((f) => f.endsWith(".mdx")).map((f) => f.replace(/\.mdx$/, ""))
+      ? fs
+        .readdirSync(dir)
+        .filter((f) => f.endsWith(".mdx"))
+        .map((f) => f.replace(/\.mdx$/, ""))
       : [];
 
     let summaries: ArticleSummary[] = slugs
@@ -71,7 +78,8 @@ export const mdxArticleRepository: ArticleRepository = {
       }))
       .filter((a) => !a.draft);
 
-    if (options.category) summaries = summaries.filter((a) => a.category === options.category);
+    if (options.category)
+      summaries = summaries.filter((a) => a.category === options.category);
     if (options.featuredOnly) summaries = summaries.filter((a) => a.featured);
 
     summaries.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
@@ -87,5 +95,19 @@ export const mdxArticleRepository: ArticleRepository = {
       content: result.content,
       readingMinutes: Math.ceil(readingTime(result.content).minutes),
     };
+  },
+
+  async getActiveAnnouncements(locale) {
+    const today = new Date().toISOString().slice(0, 10);
+    const all = await mdxArticleRepository.getAll(locale, { category: 'announcements' });
+
+    return all
+      .filter((a) => a.announcement?.active)
+      .filter((a) => !a.announcement!.startDate || a.announcement!.startDate <= today)
+      .filter((a) => !a.announcement!.endDate || a.announcement!.endDate >= today)
+      .sort((a, b) => {
+        const rankDiff = SEVERITY_RANK[b.announcement!.severity] - SEVERITY_RANK[a.announcement!.severity];
+        return rankDiff !== 0 ? rankDiff : (a.publishedAt < b.publishedAt ? 1 : -1);
+      });
   },
 };

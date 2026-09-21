@@ -1,4 +1,9 @@
-import type { Article, ArticleSummary, GetAllArticlesOptions, Locale } from "./types";
+import type {
+  Article,
+  ArticleSummary,
+  GetAllArticlesOptions,
+  Locale,
+} from "./types";
 import { mdxArticleRepository } from "./mdx";
 
 /**
@@ -9,11 +14,16 @@ import { mdxArticleRepository } from "./mdx";
  */
 export interface ArticleRepository {
   /** Returns published article summaries for a given locale, newest first. */
-  getAll(locale: Locale, options?: GetAllArticlesOptions): Promise<ArticleSummary[]>;
+  getAll(
+    locale: Locale,
+    options?: GetAllArticlesOptions
+  ): Promise<ArticleSummary[]>;
   /** Returns a single full article by slug in the given locale, or `null`. */
   getBySlug(locale: Locale, slug: string): Promise<Article | null>;
   /** Returns every known slug across all locales (deduplicated) — used by `generateStaticParams`. */
   getAllSlugs(): Promise<string[]>;
+  /** Returns currently-active announcements for a locale, most urgent/newest first. */
+  getActiveAnnouncements(locale: Locale): Promise<ArticleSummary[]>;
 }
 
 /**

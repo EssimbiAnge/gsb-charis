@@ -16,9 +16,7 @@ export default async function ContactPage({ params }: PageProps) {
 
   return (
     <>
-      <Header lang={currentLang} />
 
-      <main>
         <PageHero
           eyebrow={isFr ? "Nous contacter" : "Contact Us"}
           title={
@@ -345,9 +343,7 @@ export default async function ContactPage({ params }: PageProps) {
             </div>
           </div>
         </section>
-      </main>
 
-      <Footer lang={currentLang} />
     </>
   );
 }

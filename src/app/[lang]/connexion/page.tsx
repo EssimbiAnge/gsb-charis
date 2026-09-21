@@ -17,27 +17,21 @@ export default async function LoginPage({ params }: PageProps) {
 
   return (
     <>
-      <Header lang={currentLang} />
+      <PageHero
+        eyebrow={isFr ? "Espace sécurisé" : "Secure Portal"}
+        title={
+          isFr
+            ? "Connectez-vous à votre espace CHARIS"
+            : "Sign in to your CHARIS portal"
+        }
+        description={
+          isFr
+            ? "Accédez à votre espace personnel pour consulter les informations scolaires, administratives et pédagogiques qui vous concernent."
+            : "Access your personal portal to view the school, administrative and academic information relevant to you."
+        }
+      />
 
-      <main>
-        <PageHero
-          eyebrow={isFr ? "Espace sécurisé" : "Secure Portal"}
-          title={
-            isFr
-              ? "Connectez-vous à votre espace CHARIS"
-              : "Sign in to your CHARIS portal"
-          }
-          description={
-            isFr
-              ? "Accédez à votre espace personnel pour consulter les informations scolaires, administratives et pédagogiques qui vous concernent."
-              : "Access your personal portal to view the school, administrative and academic information relevant to you."
-          }
-        />
-
-        <LoginPanel lang={currentLang} />
-      </main>
-
-      <Footer lang={currentLang} />
+      <LoginPanel lang={currentLang} />
     </>
   );
 }

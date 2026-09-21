@@ -316,8 +316,7 @@ export default async function EventsPage({ params }: PageProps) {
             {
               date: "2 September 2026",
               title: "Teachers’ Pre-Reopening",
-              description:
-                "Teachers’ welcome and pedagogical preparation.",
+              description: "Teachers’ welcome and pedagogical preparation.",
               type: "school" as const,
             },
             {
@@ -639,173 +638,165 @@ export default async function EventsPage({ params }: PageProps) {
 
   return (
     <>
-      <Header lang={currentLang} />
+      <PageHero
+        eyebrow={isFr ? "ÉVÉNEMENTS" : "EVENTS"}
+        title={
+          isFr ? "Calendrier scolaire 2026-2027" : "2026-2027 School Calendar"
+        }
+        description={
+          isFr
+            ? "Retrouvez les principales dates de l’année scolaire : rentrée, compositions, échéances de paiement, événements CHARIS, congés et jours fériés."
+            : "Find the key dates of the school year: reopening, assessments, payment deadlines, CHARIS events, breaks and public holidays."
+        }
+      />
 
-      <main>
-        <PageHero
-          eyebrow={isFr ? "ÉVÉNEMENTS" : "EVENTS"}
-          title={
-            isFr
-              ? "Calendrier scolaire 2026-2027"
-              : "2026-2027 School Calendar"
-          }
-          description={
-            isFr
-              ? "Retrouvez les principales dates de l’année scolaire : rentrée, compositions, échéances de paiement, événements CHARIS, congés et jours fériés."
-              : "Find the key dates of the school year: reopening, assessments, payment deadlines, CHARIS events, breaks and public holidays."
-          }
-        />
+      {/* INFORMATIONS PRATIQUES */}
+      <section className="bg-white px-6 py-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="rounded-2xl border border-blue-100 bg-blue-50 p-7">
+              <p className="text-sm font-bold uppercase tracking-widest text-orange-500">
+                {isFr ? "Inscriptions" : "Admissions"}
+              </p>
 
-        {/* INFORMATIONS PRATIQUES */}
-        <section className="bg-white px-6 py-16">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-6 lg:grid-cols-3">
-              <div className="rounded-2xl border border-blue-100 bg-blue-50 p-7">
-                <p className="text-sm font-bold uppercase tracking-widest text-orange-500">
-                  {isFr ? "Inscriptions" : "Admissions"}
+              <h2 className="mt-3 text-2xl font-bold text-blue-950">
+                {isFr ? "Inscriptions tous les jours" : "Admissions Every Day"}
+              </h2>
+
+              <p className="mt-3 text-gray-700">
+                {isFr ? "À partir de 08h30" : "From 8:30 a.m."}
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-blue-100 bg-blue-50 p-7">
+              <p className="text-sm font-bold uppercase tracking-widest text-orange-500">
+                {isFr ? "Frais d’inscription" : "Registration Fee"}
+              </p>
+
+              <h2 className="mt-3 text-2xl font-bold text-blue-950">
+                40 000 FCFA
+              </h2>
+
+              <p className="mt-3 text-gray-700">
+                {isFr
+                  ? "Pré-maternelle, Maternelle et Primaire"
+                  : "Pre-Nursery, Nursery and Primary"}
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-blue-100 bg-blue-50 p-7">
+              <p className="text-sm font-bold uppercase tracking-widest text-orange-500">
+                {isFr ? "Scolarité totale" : "Total Tuition"}
+              </p>
+
+              <div className="mt-3 space-y-2 text-gray-700">
+                <p>
+                  <strong>{isFr ? "Pré-maternelle :" : "Pre-Nursery:"}</strong>{" "}
+                  90 000 FCFA
                 </p>
-
-                <h2 className="mt-3 text-2xl font-bold text-blue-950">
-                  {isFr ? "Inscriptions tous les jours" : "Admissions Every Day"}
-                </h2>
-
-                <p className="mt-3 text-gray-700">
-                  {isFr ? "À partir de 08h30" : "From 8:30 a.m."}
+                <p>
+                  <strong>{isFr ? "Maternelle :" : "Nursery:"}</strong> 75 000
+                  FCFA
                 </p>
-              </div>
-
-              <div className="rounded-2xl border border-blue-100 bg-blue-50 p-7">
-                <p className="text-sm font-bold uppercase tracking-widest text-orange-500">
-                  {isFr ? "Frais d’inscription" : "Registration Fee"}
+                <p>
+                  <strong>{isFr ? "Primaire :" : "Primary:"}</strong> 70 000
+                  FCFA
                 </p>
-
-                <h2 className="mt-3 text-2xl font-bold text-blue-950">
-                  40 000 FCFA
-                </h2>
-
-                <p className="mt-3 text-gray-700">
-                  {isFr
-                    ? "Pré-maternelle, Maternelle et Primaire"
-                    : "Pre-Nursery, Nursery and Primary"}
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-blue-100 bg-blue-50 p-7">
-                <p className="text-sm font-bold uppercase tracking-widest text-orange-500">
-                  {isFr ? "Scolarité totale" : "Total Tuition"}
-                </p>
-
-                <div className="mt-3 space-y-2 text-gray-700">
-                  <p>
-                    <strong>{isFr ? "Pré-maternelle :" : "Pre-Nursery:"}</strong>{" "}
-                    90 000 FCFA
-                  </p>
-                  <p>
-                    <strong>{isFr ? "Maternelle :" : "Nursery:"}</strong>{" "}
-                    75 000 FCFA
-                  </p>
-                  <p>
-                    <strong>{isFr ? "Primaire :" : "Primary:"}</strong>{" "}
-                    70 000 FCFA
-                  </p>
-                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* LÉGENDE */}
-        <section className="bg-gray-50 px-6 py-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="flex flex-wrap justify-center gap-3">
-              {legend.map((item) => (
-                <span
-                  key={item.label}
-                  className={`rounded-full px-4 py-2 text-sm font-bold ${getBadgeClasses(
-                    item.type,
-                  )}`}
-                >
-                  {item.label}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CALENDRIER */}
-        <section className="bg-gray-50 px-6 pb-20 pt-8">
-          <div className="mx-auto max-w-7xl space-y-10">
-            {months.map((month) => (
-              <section
-                key={month.month}
-                className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm"
+      {/* LÉGENDE */}
+      <section className="bg-gray-50 px-6 py-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-wrap justify-center gap-3">
+            {legend.map((item) => (
+              <span
+                key={item.label}
+                className={`rounded-full px-4 py-2 text-sm font-bold ${getBadgeClasses(
+                  item.type
+                )}`}
               >
-                <div className="bg-blue-950 px-7 py-5">
-                  <h2 className="text-2xl font-bold text-white md:text-3xl">
-                    {month.month}
-                  </h2>
-                </div>
-
-                <div className="grid gap-5 p-6 md:p-8">
-                  {month.items.map((item, index) => (
-                    <article
-                      key={`${month.month}-${index}-${item.title}`}
-                      className={`rounded-2xl border p-6 ${getTypeClasses(
-                        item.type,
-                      )}`}
-                    >
-                      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-                        <div className="min-w-0">
-                          <span
-                            className={`inline-flex rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider ${getBadgeClasses(
-                              item.type,
-                            )}`}
-                          >
-                            {getTypeLabel(item.type)}
-                          </span>
-
-                          <h3 className="mt-3 text-xl font-bold text-blue-950 md:text-2xl">
-                            {item.title}
-                          </h3>
-
-                          {item.description && (
-                            <p className="mt-3 leading-7 text-gray-700">
-                              {item.description}
-                            </p>
-                          )}
-                        </div>
-
-                        {item.date && (
-                          <div className="shrink-0 rounded-xl bg-white px-4 py-3 text-sm font-bold text-blue-950 shadow-sm md:max-w-[240px] md:text-right">
-                            {item.date}
-                          </div>
-                        )}
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </section>
+                {item.label}
+              </span>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* NOTE */}
-        <section className="bg-blue-950 px-6 py-16 text-white">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl font-bold">
-              {isFr ? "À retenir" : "Please Note"}
-            </h2>
+      {/* CALENDRIER */}
+      <section className="bg-gray-50 px-6 pb-20 pt-8">
+        <div className="mx-auto max-w-7xl space-y-10">
+          {months.map((month) => (
+            <section
+              key={month.month}
+              className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm"
+            >
+              <div className="bg-blue-950 px-7 py-5">
+                <h2 className="text-2xl font-bold text-white md:text-3xl">
+                  {month.month}
+                </h2>
+              </div>
 
-            <p className="mt-5 leading-8 text-blue-100">
-              {isFr
-                ? "Certaines dates de congés et les fêtes religieuses mobiles sont indiquées à titre prévisionnel. Les dates définitives communiquées par les autorités compétentes et par l’administration de CHARIS prévaudront."
-                : "Some holiday dates and mobile religious celebrations are provisional. Final dates communicated by the competent authorities and the CHARIS administration will prevail."}
-            </p>
-          </div>
-        </section>
-      </main>
+              <div className="grid gap-5 p-6 md:p-8">
+                {month.items.map((item, index) => (
+                  <article
+                    key={`${month.month}-${index}-${item.title}`}
+                    className={`rounded-2xl border p-6 ${getTypeClasses(
+                      item.type
+                    )}`}
+                  >
+                    <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                      <div className="min-w-0">
+                        <span
+                          className={`inline-flex rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider ${getBadgeClasses(
+                            item.type
+                          )}`}
+                        >
+                          {getTypeLabel(item.type)}
+                        </span>
 
-      <Footer lang={currentLang} />
+                        <h3 className="mt-3 text-xl font-bold text-blue-950 md:text-2xl">
+                          {item.title}
+                        </h3>
+
+                        {item.description && (
+                          <p className="mt-3 leading-7 text-gray-700">
+                            {item.description}
+                          </p>
+                        )}
+                      </div>
+
+                      {item.date && (
+                        <div className="shrink-0 rounded-xl bg-white px-4 py-3 text-sm font-bold text-blue-950 shadow-sm md:max-w-[240px] md:text-right">
+                          {item.date}
+                        </div>
+                      )}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      </section>
+
+      {/* NOTE */}
+      <section className="bg-blue-950 px-6 py-16 text-white">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl font-bold">
+            {isFr ? "À retenir" : "Please Note"}
+          </h2>
+
+          <p className="mt-5 leading-8 text-blue-100">
+            {isFr
+              ? "Certaines dates de congés et les fêtes religieuses mobiles sont indiquées à titre prévisionnel. Les dates définitives communiquées par les autorités compétentes et par l’administration de CHARIS prévaudront."
+              : "Some holiday dates and mobile religious celebrations are provisional. Final dates communicated by the competent authorities and the CHARIS administration will prevail."}
+          </p>
+        </div>
+      </section>
     </>
   );
 }

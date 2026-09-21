@@ -33,20 +33,21 @@ export function ArticleCard({
       href={`/${locale}/actualites/${article.slug}`}
       className="group block"
     >
-      <div
-        className={`relative overflow-hidden bg-muted ${
-          size === "large" ? "aspect-video" : "aspect-4/3"
-        }`}
-      >
-        {article.coverImage && (
+      {article.coverImage && (
+        <div
+          className={`relative overflow-hidden bg-muted ${
+            size === "large" ? "aspect-video" : "aspect-4/3"
+          }`}
+        >
           <Image
             src={article.coverImage}
             alt={article.title}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
-        )}
-      </div>
+        </div>
+      )}
+
       <div className="mt-3">
         <p className="text-xs font-semibold uppercase tracking-wide text-primary">
           {

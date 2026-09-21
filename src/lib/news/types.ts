@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { coerceDate } from "../utils";
 
 /**
  * Frontmatter schema for a news article `.mdx` file. Validated on read
@@ -26,21 +27,36 @@ export const articleFrontmatterSchema = z.object({
   slug: z.string().min(1),
   excerpt: z.string().min(1),
   /** ISO date string, e.g. "2026-09-08". */
-/** Accepts either a YAML-parsed Date or a plain string, normalized to YYYY-MM-DD. */
- /** Accepts loosely-formatted dates ("2026-9-4", "9/4/2026", a Date) and normalizes to YYYY-MM-DD. */
- publishedAt: z.preprocess((val) => {
-   if (val instanceof Date) return val.toISOString().slice(0, 10);
-   if (typeof val === "string") {
-     const parsed = new Date(val);
-     if (!isNaN(parsed.getTime())) return parsed.toISOString().slice(0, 10);
-   }
-   return val;
- }, z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "date must be YYYY-MM-DD")), author: z.string().default("CHARIS School"),
+  /** Accepts either a YAML-parsed Date or a plain string, normalized to YYYY-MM-DD. */
+  /** Accepts loosely-formatted dates ("2026-9-4", "9/4/2026", a Date) and normalizes to YYYY-MM-DD. */
+  publishedAt: z.preprocess(
+    coerceDate(),
+    z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "date must be YYYY-MM-DD")
+  ),
+  author: z.string().default("CHARIS School"),
   category: z.string().default("General"),
   coverImage: z.string().optional(),
   featured: z.boolean().default(false),
   /** Set true to keep a file in content/news without publishing it. */
   draft: z.boolean().default(false),
+
+  /** Marks this article to also appear as a site-wide announcement banner while active. */
+  announcement: z
+    .object({
+      active: z.boolean().default(false),
+      severity: z.enum(["info", "warning", "urgent"]).default("info"),
+      /** Short banner-friendly text. Falls back to `excerpt` if omitted. */
+      bannerText: z.string().optional(),
+      /** ISO date — banner starts showing on this day. Omit to show immediately. */
+      startDate: z
+        .preprocess(coerceDate(), z.string().regex(/^\d{4}-\d{2}-\d{2}$/))
+        .optional(),
+      /** ISO date — banner stops showing after this day. Omit for no auto-expiry. */
+      endDate: z
+        .preprocess(coerceDate(), z.string().regex(/^\d{4}-\d{2}-\d{2}$/))
+        .optional(),
+    })
+    .optional(),
 });
 
 /** Validated frontmatter for a single article. */

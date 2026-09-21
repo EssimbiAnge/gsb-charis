@@ -29,14 +29,19 @@ export default async function NewsIndexPage({ params }: NewsIndexPageProps) {
   const currentLang: "fr" | "en" = lang === "en" ? "en" : "fr";
   const isFr = currentLang === "fr";
 
-  const [featured, allArticles] = await Promise.all([
+  const [announcements, featured, allArticles] = await Promise.all([
+    articleRepository.getActiveAnnouncements(lang),
     articleRepository.getAll(lang, { featuredOnly: true, limit: 2 }),
     articleRepository.getAll(lang),
   ]);
 
   // Keep featured articles out of the main grid so they aren't shown twice.
   const featuredSlugs = new Set(featured.map((a) => a.slug));
-  const [lead, ...rest] = allArticles.filter((a) => !featuredSlugs.has(a.slug));
+  const announcementSlugs = new Set(announcements.map((a) => a.slug));
+
+  const [lead, ...rest] = allArticles.filter(
+    (a) => !featuredSlugs.has(a.slug) && !announcementSlugs.has(a.slug)
+  );
 
   return (
     <>
@@ -54,11 +59,31 @@ export default async function NewsIndexPage({ params }: NewsIndexPageProps) {
         }
       />
       <section className=" px-6 py-10">
+        {/* ANNOUNCMENTS */}
+        {announcements.length > 0 && (
+          <div className="mb-14">
+            <h1 className="mb-6 text-3xl font-bold tracking-tight">
+              {lang === "fr" ? "Annonces" : "Announcements"}
+            </h1>
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+              {announcements.map((article) => (
+                <ArticleCard
+                  key={article.slug}
+                  article={article}
+                  locale={lang}
+                  size="large"
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* FEATURED POSTS */}
         {featured.length > 0 && (
           <div className="mb-14">
-            <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+            <h1 className="mb-6 text-3xl font-bold tracking-tight">
               {lang === "fr" ? "À la une" : "Featured"}
-            </h2>
+            </h1>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
               {featured.map((article) => (
                 <ArticleCard
