@@ -47,7 +47,7 @@ export const galleryEventSchema = z.object({
   slug: z.string().min(1),
   /** Accepts loosely-formatted dates ("2026-9-4", "9/4/2026", a Date) and normalizes to YYYY-MM-DD. */
   date: z.preprocess(
-    coerceDate,
+    coerceDate(),
     z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "date must be YYYY-MM-DD")
   ),
   category: z.string().default("General"),
