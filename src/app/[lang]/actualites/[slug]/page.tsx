@@ -3,7 +3,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { articleRepository } from "@/lib/news/repository";
 import { mdxComponents } from "@/components/content/mdx-components";
 import PageHero from "@/components/PageHero";
-import { Article, Locale } from "@/lib/news/types";
+import { Locale } from "@/lib/news/types";
 import { ArticleCard } from "@/components/content/article-card";
 import { articleCategories } from "@/lib/types";
 
