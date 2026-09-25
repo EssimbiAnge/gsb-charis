@@ -6,6 +6,10 @@ import PageHero from "@/components/PageHero";
 import { Locale } from "@/lib/news/types";
 import { ArticleCard } from "@/components/content/article-card";
 import { articleCategories } from "@/lib/types";
+import {
+  renderBrandText,
+  stripBrandMarker,
+} from "@/components/content/brand-text";
 
 interface NewsArticlePageProps {
   params: Promise<{ lang: Locale; slug: string }>;
@@ -21,8 +25,10 @@ export async function generateMetadata({ params }: NewsArticlePageProps) {
   const article = await articleRepository.getBySlug(lang, slug);
   if (!article) return {};
   return {
-    title: `${article.title} — CHARIS Bilingual School Complex`,
-    description: article.excerpt,
+    title: `${stripBrandMarker(
+      article.title
+    )} — CHARIS Bilingual School Complex`,
+    description: stripBrandMarker(article.excerpt),
     openGraph: article.coverImage
       ? { images: [article.coverImage] }
       : undefined,
@@ -50,8 +56,8 @@ export default async function NewsArticlePage({
             currentLang
           ]
         }
-        title={article.title}
-        description={article.excerpt}
+        title={renderBrandText(article.title)}
+        description={renderBrandText(article.excerpt)}
       />
 
       <article className="mx-auto max-w-3xl px-4 py-10">

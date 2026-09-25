@@ -29,15 +29,16 @@ export default async function NewsIndexPage({ params }: NewsIndexPageProps) {
   const currentLang: "fr" | "en" = lang === "en" ? "en" : "fr";
   const isFr = currentLang === "fr";
 
-  const [announcements, featured, allArticles] = await Promise.all([
+  const [announcements, others, featured, allArticles] = await Promise.all([
     articleRepository.getActiveAnnouncements(lang),
+    articleRepository.getAll(lang, { category: "announcements" }),
     articleRepository.getAll(lang, { featuredOnly: true, limit: 2 }),
     articleRepository.getAll(lang),
   ]);
 
   // Keep featured articles out of the main grid so they aren't shown twice.
   const featuredSlugs = new Set(featured.map((a) => a.slug));
-  const announcementSlugs = new Set(announcements.map((a) => a.slug));
+  const announcementSlugs = new Set(others.map((a) => a.slug));
 
   const [lead, ...rest] = allArticles.filter(
     (a) => !featuredSlugs.has(a.slug) && !announcementSlugs.has(a.slug)

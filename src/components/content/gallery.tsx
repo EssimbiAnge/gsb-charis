@@ -37,7 +37,7 @@ export function Gallery({
         <button
           key={img.src}
           onClick={() => setSelectedIndex(i)}
-          className="relative aspect-video overflow-hidden group"
+          className="relative aspect-square overflow-hidden group"
         >
           <Image
             src={img.src}
@@ -45,7 +45,7 @@ export function Gallery({
             // width={1200}
             // height={800}
             fill
-            className="block h-auto w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="block h-auto w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
           />
         </button>
       ))}

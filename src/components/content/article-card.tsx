@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ArticleSummary, Locale } from "@/lib/news/types";
 import React from "react";
 import { articleCategories } from "@/lib/types";
+import { renderBrandText } from "./brand-text";
 
 /** Props for {@link ArticleCard}. */
 export interface ArticleCardProps {
@@ -62,10 +63,10 @@ export function ArticleCard({
             size === "large" ? "text-2xl" : "text-lg"
           }`}
         >
-          {article.title}
+          {renderBrandText(article.title)}
         </h3>
         <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">
-          {article.excerpt}
+          {renderBrandText(article.excerpt)}
         </p>
         <p className="mt-2 text-xs uppercase tracking-wide text-muted-foreground">
           {formattedDate}

@@ -1,14 +1,12 @@
+import { ReactNode } from "react";
+
 type Props = {
   eyebrow?: string;
-  title: string;
-  description?: string;
+  title: string | ReactNode;
+  description?: string | ReactNode;
 };
 
-export default function PageHero({
-  eyebrow,
-  title,
-  description,
-}: Props) {
+export default function PageHero({ eyebrow, title, description }: Props) {
   return (
     <section className="bg-blue-950 px-6 py-16 text-white">
       <div className="mx-auto max-w-7xl">

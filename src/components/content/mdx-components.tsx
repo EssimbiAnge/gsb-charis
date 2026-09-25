@@ -6,6 +6,7 @@ import { VideoEmbed } from "./video-embed";
 import { Callout } from "./callout";
 import { GalleryFromEvent } from "./gallery-from-event";
 import { ArticleImageFromGallery } from "./article-image-from-gallery";
+import CharisName from "../CharisName";
 
 /**
  * Custom element/component map passed to `<MDXRemote components={...} />`.
@@ -30,6 +31,7 @@ export const mdxComponents: MDXComponents = {
   Callout,
   ArticleImageFromGallery,
   GalleryFromEvent,
+  CharisName,
 };
 
 {
