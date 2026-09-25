@@ -46,38 +46,32 @@ export function EventGalleryClient({
 
   return (
     <>
-      <Header lang={lang} />
+      <PageHero
+        eyebrow={`${
+          articleCategories.find((c) => c.slug === category)?.name[lang]
+        } · ${itemCount} ${itemCount === 1 ? "item" : "items"} · ${dateLabel}`}
+        title={title}
+      />
 
-      <main>
-        <PageHero
-          eyebrow={`${
-            articleCategories.find((c) => c.slug === category)?.name[lang]
-          } · ${itemCount} ${
-            itemCount === 1 ? "item" : "items"
-          } · ${dateLabel}`}
-          title={title}
+      <section className="mx-auto max-w-7xl px-4 py-10">
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {items.map((item, i) => (
+            <MediaTile
+              key={i}
+              item={item}
+              locale={lang}
+              onSelect={() => setSelectedIndex(i)}
+            />
+          ))}
+        </div>
+        <Lightbox
+          items={items}
+          selectedIndex={selectedIndex}
+          locale={lang}
+          onClose={() => setSelectedIndex(null)}
+          onNavigate={setSelectedIndex}
         />
-
-        <section className="mx-auto max-w-7xl px-4 py-10">
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {items.map((item, i) => (
-              <MediaTile
-                key={i}
-                item={item}
-                locale={lang}
-                onSelect={() => setSelectedIndex(i)}
-              />
-            ))}
-          </div>
-          <Lightbox
-            items={items}
-            selectedIndex={selectedIndex}
-            locale={lang}
-            onClose={() => setSelectedIndex(null)}
-            onNavigate={setSelectedIndex}
-          />
-        </section>
-      </main>
+      </section>
     </>
   );
 }
