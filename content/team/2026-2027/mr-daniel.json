@@ -1,0 +1,29 @@
+{
+  "slug": "mr-daniel",
+  "name": "Mr Daniel",
+  "group": "teacher",
+  "roleTitle": {
+    "en": "Music Instructor",
+    "fr": "Professeur de Musique"
+  },
+  "photo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/team_profiles/mr-daniel.JPG",
+  "bio": {
+    "en": "Prepares annual schemes of work for music education and coordinates the school's extra-curricular activities.",
+    "fr": "Prépare les programmes annuels d'éducation musicale et coordonne les activités extrascolaires de l'école."
+  },
+  "contacts": [
+    {
+      "type": "email",
+      "value": "aadproph12@gmail.com"
+    },
+    {
+      "type": "whatsapp",
+      "value": "+237672091042"
+    },
+    {
+      "type": "phone",
+      "value": "+237690980478"
+    }
+  ],
+  "order": 99
+}

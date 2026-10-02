@@ -21,9 +21,9 @@ export interface TeamSectionProps {
 export function TeamSection({ section, locale }: TeamSectionProps) {
   return (
     <section className="border-t border-[#1E2A3A]/10 py-8 first:border-t-0 first:pt-0">
-      <h2 className="text-5xl font-bold text-blue-950">
+      <h3 className="text-4xl font-bold text-blue-950">
         {GROUP_LABEL[section.group][locale]}
-      </h2>
+      </h3>
       <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
         {section.members.map((member) => (
           <MemberCard key={member.slug} member={member} locale={locale} />

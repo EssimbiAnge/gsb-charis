@@ -58,12 +58,14 @@ export function MemberCard({ member, locale }: MemberCardProps) {
         <p className="mt-0.5 text-sm text-[#4A5D48]">
           {localize(member.roleTitle, locale)}
         </p>
-        <p className="mt-0.5 text-sm text-[#4A5D48]">{`${
+        {/* <p className="mt-0.5 text-sm text-[#4A5D48]">{`${
           locale === "en" ? "Since" : "Depuis"
-        } ${member.tenure}`}</p>
-        <p className="mt-2 text-sm text-muted-foreground line-clamp-3">
-          {localize(member.bio, locale)}
-        </p>
+        } ${member.tenure}`}</p> */}
+        {member.bio && (
+          <p className="mt-2 text-sm text-muted-foreground line-clamp-3">
+            {localize(member.bio, locale)}
+          </p>
+        )}
 
         {member.contacts.length > 0 && (
           <div className="mt-3 flex gap-3">

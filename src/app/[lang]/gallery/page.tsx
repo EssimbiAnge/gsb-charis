@@ -10,7 +10,7 @@ interface GalleryPageProps {
   params: Promise<{ lang: Locale }>;
 }
 
-export const metadata = { title: "Gallery — CHARIS Bilingual School Complex" };
+export const metadata = { title: "Gallery" };
 
 export default async function GalleryPage({ params }: GalleryPageProps) {
   const { lang } = await params;

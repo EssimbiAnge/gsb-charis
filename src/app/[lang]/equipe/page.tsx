@@ -1,27 +1,50 @@
-import { galleryRepository } from "@/lib/gallery/repository";
-import { YearSection } from "@/components/gallery/year-section";
 import type { Locale } from "@/lib/news/types";
 import PageHero from "@/components/PageHero";
-import Header from "@/components/Header";
 import Link from "next/link";
-import Footer from "@/components/Footer";
 import { teamRepository } from "@/lib/team/repository";
-import { TeamSection } from "@/components/team/team-section";
+import { TeamYearsAccordion } from "@/components/team/team-years-accordion";
 
 interface GalleryPageProps {
   params: Promise<{ lang: Locale }>;
 }
 
-export const metadata = {
-  title: "Rencontrez l'équipe — CHARIS Bilingual School Complex",
-};
+export async function generateMetadata({ params }: GalleryPageProps) {
+  const { lang } = await params;
+  const isFr = lang === "fr";
+
+  return {
+    title: isFr ? `Rencontrez l'équipe` : `Meet the Team`,
+    description: isFr
+      ? "Découvrez les enseignants, membres du personnel et responsables qui accompagnent nos élèves, développent leur potentiel et contribuent à faire de CHARIS un environnement où chacun peut apprendre, grandir et s’épanouir."
+      : "Get to know the teachers, staff and administrators who support our students, nurture their potential and help make life at CHARIS a place to learn, grow and thrive.",
+  };
+}
 
 export default async function GalleryPage({ params }: GalleryPageProps) {
   const { lang } = await params;
-  const sections = await teamRepository.getGroupedMembers();
 
   const currentLang: "fr" | "en" = lang === "en" ? "en" : "fr";
   const isFr = currentLang === "fr";
+
+  const years = await teamRepository.getAllYears();
+
+  if (years.length === 0) {
+    return (
+      <section className="mx-auto max-w-5xl px-4 py-10">
+        <h1 className="text-4xl font-bold text-blue-950">
+          {lang === "fr" ? "Notre équipe" : "Meet the team"}
+        </h1>
+        <p className="mt-4 text-muted-foreground">
+          {lang === "fr"
+            ? "Aucune donnée d'équipe disponible."
+            : "No team data available yet."}
+        </p>
+      </section>
+    );
+  }
+
+  const [mostRecentYear] = years;
+  const initialData = await teamRepository.getGroupedMembers(mostRecentYear);
 
   return (
     <>
@@ -55,11 +78,14 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
         </div>
       </section>
 
-      <section className="bg-gray-100 px-6 py-20">
+      <section className="bg-gray-100 px-6 py-20 pt-10">
         <div className="mx-auto max-w-7xl flex flex-col gap-12">
-          {sections.map((section) => (
-            <TeamSection key={section.group} section={section} locale={lang} />
-          ))}
+          <TeamYearsAccordion
+            years={years}
+            initialYear={mostRecentYear}
+            initialData={initialData}
+            locale={lang}
+          />
         </div>
       </section>
 

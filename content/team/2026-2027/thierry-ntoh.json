@@ -6,7 +6,6 @@
     "en": "Digital and IT Officer",
     "fr": "Responsable Digital & Informatique"
   },
-  "tenure": 2026,
   "photo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/team_profiles/thierry.jpeg",
   "bio": {
     "en": "Manages CHARIS’s digital communication and ICT activities, while teaching practical computer skills and supporting staff and pupils in the effective use of technology.",
@@ -18,5 +17,5 @@
       "value": "tohthierryntoh@gmail.com"
     }
   ],
-  "order": 1
+  "order": 10
 }

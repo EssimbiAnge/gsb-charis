@@ -18,6 +18,7 @@ const menu = [
   { fr: "Vie scolaire", en: "School Life", href: "/vie-scolaire" },
   { fr: "Événements", en: "Events", href: "/evenements" },
   { fr: "Actualités", en: "News", href: "/actualites" },
+  { fr: "Equipe", en: "Team", href: "/equipe" },
   { fr: "Galerie", en: "Gallery", href: "/gallery" },
   { fr: "Contact", en: "Contact", href: "/contact" },
 ];

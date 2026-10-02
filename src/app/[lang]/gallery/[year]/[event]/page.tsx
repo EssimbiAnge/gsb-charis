@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: EventGalleryPageProps) {
   const meta = await galleryRepository.getEvent(year, event);
   if (!meta) return {};
   return {
-    title: `${meta.title[lang]} — CHARIS Bilingual School Complex`,
+    title: `${meta.title[lang]}`,
     openGraph: { images: [meta.coverImage] },
   };
 }

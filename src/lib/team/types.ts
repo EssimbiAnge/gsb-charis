@@ -31,14 +31,19 @@ export const teamMemberSchema = z.object({
   group: z.enum(TEAM_GROUPS),
   /** e.g. "Class 3B Teacher" / "Titulaire Classe 3B". Free text, not structured class/section fields. */
   roleTitle: localizedStringSchema,
-  tenure: z.number().default(999),
-  photo: z.string().url(),
-  bio: localizedStringSchema,
+  // tenure: z.number().default(999),
+  photo: z.url(),
+  bio: localizedStringSchema.optional(),
   contacts: z.array(teamContactSchema).default([]),
   /** Lower numbers sort first within a group. Ties fall back to name order. */
   order: z.number().default(999),
 });
 export type TeamMember = z.infer<typeof teamMemberSchema>;
+
+export interface TeamMemberSummary extends TeamMember {
+  year: string;
+  itemCount: number;
+}
 
 /** All team members for one group, in display order. */
 export interface TeamGroupSection {

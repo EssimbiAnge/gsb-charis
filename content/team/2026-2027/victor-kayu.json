@@ -1,0 +1,16 @@
+{
+  "slug": "victor-kayu",
+  "name": "Mr. Victor Kayu",
+  "group": "staff",
+  "roleTitle": {
+    "en": "Resident Chaplain",
+    "fr": "Aumônier Résident"
+  },
+  "photo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/team_profiles/mr-victor.webp",
+  "bio": {
+    "en": "Supports the spiritual, moral, and emotional development of pupils, staff, and parents, in line with the school's Christian vision.",
+    "fr": "Soutient le développement spirituel, moral et émotionnel des élèves, du personnel et des parents, conformément à la vision chrétienne de l'école."
+  },
+  "contacts": [],
+  "order": 9
+}

@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: NewsArticlePageProps) {
   return {
     title: `${stripBrandMarker(
       article.title
-    )} — CHARIS Bilingual School Complex`,
+    )}`,
     description: stripBrandMarker(article.excerpt),
     openGraph: article.coverImage
       ? { images: [article.coverImage] }

@@ -14,9 +14,7 @@ export async function generateMetadata({ params }: NewsIndexPageProps) {
   const isFr = lang === "fr";
 
   return {
-    title: isFr
-      ? `Actualites — Groupe Scolaire Bilingue`
-      : `News — CHARIS Bilingual School Complex`,
+    title: isFr ? `Actualites` : `News`,
     description: isFr
       ? "Restez au cœur de la vie de CHARIS"
       : "Stay Up to Date with Life at CHARIS",
