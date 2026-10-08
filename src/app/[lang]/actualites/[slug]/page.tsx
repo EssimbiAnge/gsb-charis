@@ -25,9 +25,7 @@ export async function generateMetadata({ params }: NewsArticlePageProps) {
   const article = await articleRepository.getBySlug(lang, slug);
   if (!article) return {};
   return {
-    title: `${stripBrandMarker(
-      article.title
-    )}`,
+    title: `${stripBrandMarker(article.title)}`,
     description: stripBrandMarker(article.excerpt),
     openGraph: article.coverImage
       ? { images: [article.coverImage] }
@@ -43,7 +41,10 @@ export default async function NewsArticlePage({
   if (!article) notFound();
 
   const allArticles = await articleRepository.getAll(lang);
-  const moreArticles = allArticles.filter((a) => a.slug !== slug).slice(0, 4);
+
+  const moreArticles = allArticles
+    .filter((a) => a.slug !== slug && a.category !== "announcements")
+    .slice(0, 4);
 
   const currentLang: "fr" | "en" = lang === "en" ? "en" : "fr";
   const isFr = currentLang === "fr";
