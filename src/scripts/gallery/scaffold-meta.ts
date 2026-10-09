@@ -40,15 +40,6 @@ function inferType(ext: string): "image" | "gif" | "video" | null {
 
 /** Lists every object under a given prefix in the R2 bucket. */
 async function listObjects(prefix: string): Promise<BucketObject[]> {
-
-  console.log({
-     R2_ACCOUNT_ID,
- R2_ACCESS_KEY_ID ,
- R2_SECRET_ACCESS_KEY,
- R2_BUCKET ,
- R2_PUBLIC_URL ,
-  })
-
   const client = new S3Client({
     region: "auto",
     endpoint: `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
