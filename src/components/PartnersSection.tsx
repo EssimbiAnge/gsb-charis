@@ -1,11 +1,22 @@
+import { partnerRepository } from "@/lib/partners/repository";
+import { PartnerCard } from "./partners/partner-card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
+import Image from "next/image";
+import Link from "next/link";
+
 type PartnersSectionProps = {
   lang: "fr" | "en";
 };
 
-export default function PartnersSection({
-  lang,
-}: PartnersSectionProps) {
+export default async function PartnersSection({ lang }: PartnersSectionProps) {
   const isFr = lang === "fr";
+  const partners = await partnerRepository.getAll();
 
   return (
     <section className="bg-gray-100 px-6 py-16">
@@ -26,24 +37,43 @@ export default function PartnersSection({
             : "We collaborate with organisations and individuals who share our conviction that education can transform communities sustainably."}
         </p>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 md:grid-cols-3">
-          <div className="flex min-h-28 items-center justify-center rounded-2xl bg-white p-6 shadow-sm">
-            <p className="font-semibold text-gray-500">
-              {isFr ? "Partenaire à présenter" : "Partner to be displayed"}
-            </p>
-          </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full px-6 py-10"
+        >
+          <CarouselContent>
+            {partners.map((partner, index) => (
+              <CarouselItem
+                key={partner.slug}
+                className="basis-1/2 lg:basis-1/3"
+              >
+                <div className="relative mx-auto h-50 w-full max-w-75">
+                  {/* Decorative: the organization's name appears right below as the heading. */}
+                  <Image
+                    src={partner.logo}
+                    alt=""
+                    fill
+                    // sizes="300px"
+                    className="object-contain"
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className={"inset-y-0 -left-6 my-auto"} />
+          <CarouselNext className={"inset-y-0 -right-6 my-auto"} />
+        </Carousel>
 
-          <div className="flex min-h-28 items-center justify-center rounded-2xl bg-white p-6 shadow-sm">
-            <p className="font-semibold text-gray-500">
-              {isFr ? "Partenaire à présenter" : "Partner to be displayed"}
-            </p>
-          </div>
-
-          <div className="flex min-h-28 items-center justify-center rounded-2xl bg-white p-6 shadow-sm">
-            <p className="font-semibold text-gray-500">
-              {isFr ? "Partenaire à présenter" : "Partner to be displayed"}
-            </p>
-          </div>
+        <div className="mt-10 text-center">
+          <Link
+            href={`/${lang}/partners`}
+            className="inline-block rounded-lg bg-blue-950 px-6 py-3 font-bold text-white transition hover:bg-blue-900"
+          >
+            {isFr ? "Nos partenaires" : "Our Partners"}{" "}
+          </Link>
         </div>
       </div>
     </section>

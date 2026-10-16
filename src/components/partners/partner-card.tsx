@@ -38,8 +38,20 @@ export function PartnerCard({ partner, locale }: PartnerCardProps) {
             {partner.name}
           </a>
         </h2>
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-2 leading-relaxed">
           {localize(partner.description, locale)}
+        </p>
+
+        <p className="mt-2 leading-relaxed">
+          {locale == "fr" ? "En savoir plus sur" : "Learn more about"}
+          <a
+            href={partner.website ?? "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-1 text-blue-950 underline"
+          >
+            {partner.name}
+          </a>
         </p>
       </div>
     </>
