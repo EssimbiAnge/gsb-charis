@@ -52,6 +52,7 @@ export default async function NewsIndexPage({ params }: NewsIndexPageProps) {
             : "Discover the latest news, events, activities and highlights from Groupe Scolaire Bilingue CHARIS."
         }
       />
+
       <section className=" px-6 py-10">
         {/* ANNOUNCMENTS */}
         {announcements.length > 0 && (

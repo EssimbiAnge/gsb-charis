@@ -5,23 +5,67 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 import CharisName from "./CharisName";
 
 type HeaderProps = {
   lang: "fr" | "en";
 };
 
-const menu = [
+/** A label in both site languages. */
+type Label = { fr: string; en: string };
+
+/** A single navigation link. */
+type MenuLink = Label & { href: string };
+
+/**
+ * A top-level menu entry. With `children` it renders as a dropdown on
+ * desktop, listing its own page first (labelled with `overview`, or its
+ * own label if omitted), then the children.
+ */
+type MenuItem = MenuLink & { overview?: Label; children?: MenuLink[] };
+
+const menu: MenuItem[] = [
   { fr: "Accueil", en: "Home", href: "" },
-  { fr: "À propos", en: "About", href: "/a-propos" },
+  {
+    fr: "À propos",
+    en: "About",
+    href: "/a-propos",
+    overview: { fr: "Présentation", en: "Overview" },
+    children: [
+      { fr: "Notre équipe", en: "Our team", href: "/equipe" },
+      { fr: "Nos partenaires", en: "Our partners", href: "/partners" },
+    ],
+  },
   { fr: "Admissions", en: "Admissions", href: "/admissions" },
   { fr: "Vie scolaire", en: "School Life", href: "/vie-scolaire" },
-  { fr: "Événements", en: "Events", href: "/evenements" },
-  { fr: "Actualités", en: "News", href: "/actualites" },
-  { fr: "Equipe", en: "Team", href: "/equipe" },
+  {
+    fr: "Actualités & Événements",
+    en: "News & Events",
+    href: "/actualites",
+    overview: { fr: "Actualités", en: "News" },
+    children: [{ fr: "Événements", en: "Events", href: "/evenements" }],
+  },
+
   { fr: "Galerie", en: "Gallery", href: "/gallery" },
   { fr: "Contact", en: "Contact", href: "/contact" },
 ];
+
+/**
+ * Overrides shadcn's light-theme trigger/link colours so items read
+ * correctly on the navy header, including the open and focus states.
+ */
+const navItemClass =
+  "bg-transparent text-white hover:bg-white/5 hover:text-orange-400 focus:bg-white/5 focus:text-orange-400 data-[state=open]:bg-white/5 data-[state=open]:text-orange-400 data-[state=open]:hover:bg-white/5 data-[state=open]:focus:bg-white/5";
 
 export default function Header({ lang }: HeaderProps) {
   const isFr = lang === "fr";
@@ -51,19 +95,60 @@ export default function Header({ lang }: HeaderProps) {
         </Link>
 
         {/* MENU — desktop */}
-        <nav className="hidden items-center gap-5 lg:flex">
-          {menu.map((item) => (
-            <Link
-              key={item.href}
-              href={`/${lang}${item.href}`}
-              className="text-sm font-medium text-white transition hover:text-orange-400"
-            >
-              {isFr ? item.fr : item.en}
-            </Link>
-          ))}
-        </nav>
+        <NavigationMenu className="hidden lg:flex">
+          <NavigationMenuList className="gap-1">
+            {menu.map((item) => {
+              if (!item.children) {
+                return (
+                  <NavigationMenuItem key={item.href}>
+                    <NavigationMenuLink
+                      className={cn(navigationMenuTriggerStyle(), navItemClass)}
+                      render={
+                        <Link href={`/${lang}${item.href}`}>{item[lang]}</Link>
+                      }
+                    />
+                  </NavigationMenuItem>
+                );
+              }
 
-        {/* ACTIONS — desktop */}
+              const entries = [
+                { label: (item.overview ?? item)[lang], href: item.href },
+                ...item.children.map((child) => ({
+                  label: child[lang],
+                  href: child.href,
+                })),
+              ];
+
+              return (
+                <NavigationMenuItem key={item.href}>
+                  <NavigationMenuTrigger className={navItemClass}>
+                    {item[lang]}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-56 gap-1 p-2">
+                      {entries.map((entry) => (
+                        <li key={entry.href}>
+                          <NavigationMenuLink
+                            render={
+                              <Link
+                                href={`/${lang}${entry.href}`}
+                                className="block rounded-md px-3 py-2 text-sm font-medium text-blue-950 hover:bg-orange-200 hover:text-orange-600"
+                              >
+                                {entry.label}
+                              </Link>
+                            }
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              );
+            })}
+          </NavigationMenuList>
+        </NavigationMenu>
+
+        {/* ACTIONS */}
         <div className="flex shrink-0 items-center gap-3">
           <Link
             href={`/${lang}/soutenir`}
@@ -100,7 +185,7 @@ export default function Header({ lang }: HeaderProps) {
             </Link>
           </div>
 
-          {/* MENU TRIGGER — mobile only */}
+          {/* MENU TRIGGER — mobile */}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
               render={
@@ -119,7 +204,7 @@ export default function Header({ lang }: HeaderProps) {
               showCloseButton={false}
             >
               <div className="flex h-full flex-col">
-                {/* Drawer header — logo + close */}
+                {/* Drawer header */}
                 <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
                   <Link
                     href={`/${lang}`}
@@ -146,21 +231,37 @@ export default function Header({ lang }: HeaderProps) {
                   </button>
                 </div>
 
-                {/* Drawer nav links */}
+                {/* Drawer nav — children indented under their parent */}
                 <nav className="flex flex-col gap-1 overflow-y-auto px-3 py-4">
                   {menu.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={`/${lang}${item.href}`}
-                      onClick={() => setOpen(false)}
-                      className="rounded-lg px-3 py-3 text-base font-medium text-white transition hover:bg-white/10 hover:text-orange-400"
-                    >
-                      {isFr ? item.fr : item.en}
-                    </Link>
+                    <div key={item.href}>
+                      <Link
+                        href={`/${lang}${item.href}`}
+                        onClick={() => setOpen(false)}
+                        className="block rounded-lg px-3 py-3 text-base font-medium text-white transition hover:bg-white/10 hover:text-orange-400"
+                      >
+                        {item[lang]}
+                      </Link>
+
+                      {item.children && (
+                        <div className="mb-1 ml-4 flex flex-col border-l border-white/10 pl-2">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.href}
+                              href={`/${lang}${child.href}`}
+                              onClick={() => setOpen(false)}
+                              className="rounded-lg px-3 py-2.5 text-sm text-white/80 transition hover:bg-white/10 hover:text-orange-400"
+                            >
+                              {child[lang]}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </nav>
 
-                {/* Drawer footer — actions + language */}
+                {/* Drawer footer */}
                 <div className="mt-auto space-y-3 border-t border-white/10 px-6 py-5">
                   <Link
                     href={`/${lang}/soutenir`}

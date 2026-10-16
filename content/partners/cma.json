@@ -1,0 +1,10 @@
+{
+    "name": "Children's Mission Africa (CMA)",
+    "logo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/partners/cma.png",
+    "description": {
+        "en": "A children-focused mission working in nine African countries across thirteen sustainable development projects, with funding from Children's Mission Sweden and partners. Alongside CHARIS, it supports pupils' education and equips parents through entrepreneurship training, helping families build a stable future.",
+        "fr": "Une mission centrée sur les enfants, présente dans neuf pays africains à travers treize projets de développement durable, avec le financement de Children's Mission Suède et d'autres partenaires. Aux côtés de CHARIS, elle soutient l'éducation des élèves et accompagne les parents par des formations en entrepreneuriat, pour aider les familles à bâtir un avenir stable."
+    },
+    "website": "https://childrensmissionafrica.org/",
+    "order": 4
+}

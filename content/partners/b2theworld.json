@@ -1,0 +1,10 @@
+{
+    "name": "B2THEWORLD (B2W)",
+    "logo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/partners/b2w.png",
+    "description": {
+        "en": "A global partnership of Christians fostering transformative education in countries recovering from war, so that every child affected by conflict can know fullness of life.",
+        "fr": "Un partenariat mondial de chrétiens qui promeut une éducation transformatrice dans les pays se relevant de la guerre, afin que chaque enfant touché par un conflit connaisse la plénitude de vie."
+    },
+    "website": "https://www.b2theworld.org/",
+    "order": 5
+}
