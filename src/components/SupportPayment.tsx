@@ -1,7 +1,8 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, ReactNode, useMemo, useState } from "react";
 import CharisName from "./CharisName";
+import { renderBrandText } from "./content/brand-text";
 
 type Lang = "fr" | "en";
 
@@ -16,8 +17,8 @@ type SupportOption = {
   id: string;
   titleFr: string;
   titleEn: string;
-  descriptionFr: string;
-  descriptionEn: string;
+  descriptionFr: ReactNode;
+  descriptionEn: ReactNode;
 };
 
 const supportOptions: Record<SupportCategory, SupportOption[]> = {
@@ -102,12 +103,8 @@ const supportOptions: Record<SupportCategory, SupportOption[]> = {
       id: "community-projects",
       titleFr: "Développer les communautés",
       titleEn: "Develop communities",
-      descriptionFr: `Soutenir les initiatives éducatives, sociales et communautaires de ${(
-        <CharisName />
-      )}.`,
-      descriptionEn: `Support ${(
-        <CharisName />
-      )} educational, social and community initiatives.`,
+      descriptionFr: `Soutenir les initiatives éducatives, sociales et communautaires de {{CharisName}}.`,
+      descriptionEn: `Support {{CharisName}} educational, social and community initiatives.`,
     },
   ],
 };
@@ -169,9 +166,11 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
             </p>
 
             <h2 className="mt-3 text-4xl font-bold text-blue-950">
-              {isFr
-                ? `Trois manières de soutenir ${(<CharisName />)}`
-                : `Three ways to support ${(<CharisName />)}`}
+              {renderBrandText(
+                isFr
+                  ? `Trois manières de soutenir {{CharisName}}`
+                  : `Three ways to support {{CharisName}}`
+              )}
             </h2>
           </div>
 
@@ -425,9 +424,11 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
 
                 <div>
                   <p className="text-sm text-blue-200">
-                    {isFr
-                      ? `Référence ${(<CharisName />)}`
-                      : `${(<CharisName />)} Reference`}
+                    {renderBrandText(
+                      isFr
+                        ? "Référence {{CharisName}}"
+                        : "{{CharisName}} Reference"
+                    )}
                   </p>
 
                   <p className="mt-1 break-all font-bold text-orange-400">
@@ -464,13 +465,11 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl leading-8 text-gray-600">
-              {isFr
-                ? `Votre soutien sera confirmé après vérification de la transaction dans le compte marchand officiel de ${(
-                    <CharisName />
-                  )}.`
-                : `Your support will be confirmed after the transaction has been verified in the official ${(
-                    <CharisName />
-                  )} merchant account.`}
+              {renderBrandText(
+                isFr
+                  ? `Votre soutien sera confirmé après vérification de la transaction dans le compte marchand officiel de {{CharisName}}.`
+                  : `Your support will be confirmed after the transaction has been verified in the official {{CharisName}} merchant account.`
+              )}
             </p>
           </div>
 
@@ -612,13 +611,11 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
                 </p>
 
                 <p className="mt-2 leading-7 text-red-700">
-                  {isFr
-                    ? `Ne communiquez jamais votre code secret MTN MoMo ou Orange Money. ${(
-                        <CharisName />
-                      )} ne vous demandera jamais ce code.`
-                    : `Never share your MTN MoMo or Orange Money secret code. ${(
-                        <CharisName />
-                      )} will never ask you for it.`}
+                  {renderBrandText(
+                    isFr
+                      ? "Ne communiquez jamais votre code secret MTN MoMo ou Orange Money. {{CharisName}} ne vous demandera jamais ce code."
+                      : "Never share your MTN MoMo or Orange Money secret code. {{CharisName}} will never ask you for it."
+                  )}
                 </p>
               </div>
 

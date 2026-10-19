@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import CharisName from "@/components/CharisName";
 import Link from "next/link";
+import { renderBrandText } from "@/components/content/brand-text";
 
 type PageProps = {
   params: Promise<{
@@ -61,15 +62,11 @@ export default async function AboutPage({ params }: PageProps) {
             ? "Former des leaders capables de transformer leurs communautés"
             : "Raising leaders who can transform their communities"
         }
-        description={
+        description={renderBrandText(
           isFr
-            ? `Le Groupe Scolaire Bilingue ${(
-                <CharisName />
-              )} développe les compétences académiques, le caractère, la pensée critique, la collaboration et la capacité à apporter des solutions.`
-            : `Groupe Scolaire Bilingue ${(
-                <CharisName />
-              )} develops academic competence, character, critical thinking, collaboration and the ability to create solutions.`
-        }
+            ? `Le Groupe Scolaire Bilingue {{CharisName}} développe les compétences académiques, le caractère, la pensée critique, la collaboration et la capacité à apporter des solutions.`
+            : `Groupe Scolaire Bilingue {{CharisName}} develops academic competence, character, critical thinking, collaboration and the ability to create solutions.`
+        )}
       />
 
       <section className="bg-white px-6 py-20">
@@ -233,9 +230,11 @@ export default async function AboutPage({ params }: PageProps) {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 lg:flex-row">
           <div>
             <h2 className="text-4xl font-bold text-blue-950">
-              {isFr
-                ? `Découvrez les programmes de ${(<CharisName />)}`
-                : `Discover ${(<CharisName />)} programmes`}
+              {renderBrandText(
+                isFr
+                  ? `Découvrez les programmes de {{CharisName}}`
+                  : `Discover {{CharisName}} programmes`
+              )}
             </h2>
 
             <p className="mt-3 text-lg text-blue-950">

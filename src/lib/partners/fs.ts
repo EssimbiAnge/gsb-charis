@@ -28,6 +28,6 @@ export const fsPartnerRepository: PartnerRepository = {
             .readdirSync(PARTNERS_DIR)
             .filter((f) => f.endsWith(".json"))
             .map(readPartnerFile)
-            .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name));
+            .sort((a, b) => a.order - b.order || a.name.short.localeCompare(b.name.short));
     },
 };

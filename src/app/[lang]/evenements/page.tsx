@@ -1,6 +1,5 @@
 import CharisName from "@/components/CharisName";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import { renderBrandText } from "@/components/content/brand-text";
 import PageHero from "@/components/PageHero";
 
 type PageProps = {
@@ -131,7 +130,7 @@ export default async function EventsPage({ params }: PageProps) {
             {
               date: "19 décembre 2026",
               title: "Action de grâce de l’année",
-              description: `Événement institutionnel ${<CharisName />}.`,
+              description: `Événement institutionnel CHARIS.`,
               type: "charis" as const,
             },
           ],
@@ -399,7 +398,7 @@ export default async function EventsPage({ params }: PageProps) {
             {
               date: "19 December 2026",
               title: "Year-End Thanksgiving",
-              description: `${<CharisName />} institutional event.`,
+              description: `CHARIS institutional event.`,
               type: "charis" as const,
             },
           ],
@@ -644,11 +643,11 @@ export default async function EventsPage({ params }: PageProps) {
         title={
           isFr ? "Calendrier scolaire 2026-2027" : "2026-2027 School Calendar"
         }
-        description={
+        description={renderBrandText(
           isFr
-            ? `Retrouvez les principales dates de l’année scolaire : rentrée, compositions, échéances de paiement, événements ${<CharisName />}, congés et jours fériés.`
-            : `Find the key dates of the school year: reopening, assessments, payment deadlines, ${<CharisName />} events, breaks and public holidays.`
-        }
+            ? `Retrouvez les principales dates de l’année scolaire : rentrée, compositions, échéances de paiement, événements {{CharisName}}, congés et jours fériés.`
+            : `Find the key dates of the school year: reopening, assessments, payment deadlines, {{CharisName}} events, breaks and public holidays.`
+        )}
       />
 
       {/* INFORMATIONS PRATIQUES */}
@@ -792,9 +791,20 @@ export default async function EventsPage({ params }: PageProps) {
           </h2>
 
           <p className="mt-5 leading-8 text-blue-100">
-            {isFr
-              ? `Certaines dates de congés et les fêtes religieuses mobiles sont indiquées à titre prévisionnel. Les dates définitives communiquées par les autorités compétentes et par l’administration de ${<CharisName />} prévaudront.`
-              : `Some holiday dates and mobile religious celebrations are provisional. Final dates communicated by the competent authorities and the ${<CharisName />} administration will prevail.`}
+            {isFr ? (
+              <>
+                Certaines dates de congés et les fêtes religieuses mobiles sont
+                indiquées à titre prévisionnel. Les dates définitives
+                communiquées par les autorités compétentes et par
+                l’administration de <CharisName /> prévaudront.
+              </>
+            ) : (
+              <>
+                Some holiday dates and mobile religious celebrations are
+                provisional. Final dates communicated by the competent
+                authorities and the <CharisName /> administration will prevail.
+              </>
+            )}
           </p>
         </div>
       </section>

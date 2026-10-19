@@ -1,4 +1,5 @@
 import CharisName from "@/components/CharisName";
+import { renderBrandText } from "@/components/content/brand-text";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LoginPanel from "@/components/LoginPanel";
@@ -20,11 +21,11 @@ export default async function LoginPage({ params }: PageProps) {
     <>
       <PageHero
         eyebrow={isFr ? "Espace sécurisé" : "Secure Portal"}
-        title={
+        title={renderBrandText(
           isFr
-            ? `Connectez-vous à votre espace ${(<CharisName />)}`
-            : `Sign in to your ${(<CharisName />)} portal`
-        }
+            ? `Connectez-vous à votre espace {{CharisName}}`
+            : `Sign in to your {{CharisName}} portal`
+        )}
         description={
           isFr
             ? "Accédez à votre espace personnel pour consulter les informations scolaires, administratives et pédagogiques qui vous concernent."

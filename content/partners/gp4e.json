@@ -1,6 +1,11 @@
 {
-    "name": "Global Partners for Education (GP4E)",
-"logo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/partners/gp4e.png",    "description": {
+    "name": {
+        "en": "Global Partners for Education",
+        "fr": "Global Partners for Education",
+        "short": "GP4E"
+    },
+    "logo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/partners/gp4e.png",
+    "description": {
         "en": "A global network of partners working together to strengthen education and expand learning opportunities for children. Provides educational resources to under-resourced communities, with a focus on teacher development and early childhood education.",
         "fr": "Un réseau mondial de partenaires œuvrant ensemble pour renforcer l'éducation et élargir les opportunités d'apprentissage des enfants. Fournit des ressources éducatives aux communautés défavorisées, avec un accent sur la formation des enseignants et l'éducation de la petite enfance."
     },

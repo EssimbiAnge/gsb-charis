@@ -1,5 +1,9 @@
 {
-    "name": "MEPCAM (Mission Enterprise Partnership Cameroon)",
+    "name": {
+        "en": "Missional Enterprise Partnership",
+        "fr": "Missional Enterprise Partnership",
+        "short": "MEPCAM"
+    },
     "logo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/partners/mepcam.png",
     "description": {
         "en": "A branch of The Navigators of Cameroon, founded in 2008, which identifies, trains and establishes entrepreneurs through enterprise development training, mentoring and financial empowerment. CMA's partner on the ground, it now reaches from the South West to the East and Far North.",

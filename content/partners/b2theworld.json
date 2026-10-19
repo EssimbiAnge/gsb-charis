@@ -1,5 +1,9 @@
 {
-    "name": "B2THEWORLD (B2W)",
+    "name": {
+        "en": "B2THEWORLD",
+        "fr": "B2THEWORLD",
+        "short": "B2W"
+    },
     "logo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/partners/b2w.png",
     "description": {
         "en": "A  a US-based non-profit supporting education for children and communities affected by war, under the banner “Transformation Through Education.”",

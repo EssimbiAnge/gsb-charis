@@ -79,8 +79,8 @@ export default function LoginPanel({ lang }: LoginPanelProps) {
 
             <p className="mt-2 leading-7 text-blue-100">
               {isFr
-                ? `Ne communiquez jamais votre mot de passe. ${<CharisName />} ne vous demandera jamais votre mot de passe par téléphone, SMS ou WhatsApp.`
-                : `Never share your password. ${<CharisName />} will never ask for your password by phone, SMS or WhatsApp.`}
+                ? <>Ne communiquez jamais votre mot de passe. <CharisName /> ne vous demandera jamais votre mot de passe par téléphone, SMS ou WhatsApp.</>
+                : <>Never share your password. <CharisName /> will never ask for your password by phone, SMS or WhatsApp.</>}
             </p>
           </div>
         </div>

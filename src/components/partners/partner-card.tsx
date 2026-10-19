@@ -27,7 +27,7 @@ export function PartnerCard({ partner, locale }: PartnerCardProps) {
           className="object-contain"
         />
       </div>
-      <div className="mt-8 border-t-4 border-blue-950 bg-white py-5">
+      <div className="mt-8 border-t-4 border-blue-950 bg-white p-5">
         <h2 className="text-lg font-semibold text-blue-950">
           <a
             href={partner.website ?? "#"}
@@ -35,7 +35,8 @@ export function PartnerCard({ partner, locale }: PartnerCardProps) {
             rel="noopener noreferrer"
             className="group block"
           >
-            {partner.name}
+            {partner.name[locale]}{" "}
+            {partner.order !== 1 ? `(${partner.name.short})` : ""}
           </a>
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -50,7 +51,7 @@ export function PartnerCard({ partner, locale }: PartnerCardProps) {
             rel="noopener noreferrer"
             className="ml-1 text-blue-950 underline"
           >
-            {partner.name}
+            {partner.name.short}
           </a>
         </p>
       </div>

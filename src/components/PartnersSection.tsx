@@ -1,5 +1,4 @@
 import { partnerRepository } from "@/lib/partners/repository";
-import { PartnerCard } from "./partners/partner-card";
 import {
   Carousel,
   CarouselContent,

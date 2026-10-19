@@ -39,9 +39,7 @@ export default function SchoolLifePreview({ lang }: SchoolLifePreviewProps) {
           </p>
 
           <h2 className="mt-3 text-4xl font-bold text-blue-950">
-            {isFr
-              ? `La vie à ${(<CharisName />)}`
-              : `Life at ${(<CharisName />)}`}
+            {isFr ? "La vie à " : "Life at "} <CharisName />
           </h2>
 
           <p className="mt-5 text-lg leading-8 text-gray-600">

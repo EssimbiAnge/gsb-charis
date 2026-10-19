@@ -4,6 +4,7 @@ import type { Locale } from "@/lib/news/types";
 import PageHero from "@/components/PageHero";
 import SupportSection from "@/components/SupportSection";
 import CharisName from "@/components/CharisName";
+import { renderBrandText } from "@/components/content/brand-text";
 
 interface PartnersPageProps {
   params: Promise<{ lang: Locale }>;
@@ -30,15 +31,11 @@ export default async function PartnersPage({ params }: PartnersPageProps) {
     <>
       <PageHero
         eyebrow={isFr ? "Nos Partenaires" : "Our Partners"}
-        title={
+        title={renderBrandText(
           lang === "fr"
-            ? `Les organisations qui collaborent avec le Groupe Scolaire Bilingue ${(
-                <CharisName />
-              )}.`
-            : `The organizations that work with ${(
-                <CharisName />
-              )} Bilingual School Complex.`
-        }
+            ? `Les organisations qui collaborent avec le Groupe Scolaire Bilingue {{CharisName}}.`
+            : `The organizations that work with {{CharisName}} Bilingual School Complex.`
+        )}
       />
 
       <section className="bg-gray-100 px-6 py-16">

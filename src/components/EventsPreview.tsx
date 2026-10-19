@@ -31,13 +31,20 @@ export default function EventsPreview({ lang }: Props) {
         </div>
 
         <p className="mt-8 text-gray-600">
-          {isFr
-            ? `Les prochains événements et temps forts du Groupe Scolaire Bilingue ${(
-                <CharisName />
-              )} seront présentés ici.`
-            : `Upcoming events and highlights from Groupe Scolaire Bilingue ${(
-                <CharisName />
-              )} will appear here.`}
+          {isFr ? (
+            <>
+              Les prochains événements et temps forts du Groupe Scolaire
+              Bilingue
+              <CharisName />
+              seront présentés ici.
+            </>
+          ) : (
+            <>
+              Upcoming events and highlights from Groupe Scolaire Bilingue
+              <CharisName />
+              will appear here.
+            </>
+          )}
         </p>
       </div>
     </section>

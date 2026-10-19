@@ -3,6 +3,7 @@ import { ArticleCard } from "@/components/content/article-card";
 import type { Locale } from "@/lib/news/types";
 import PageHero from "@/components/PageHero";
 import CharisName from "@/components/CharisName";
+import { renderBrandText } from "@/components/content/brand-text";
 
 interface NewsIndexPageProps {
   params: Promise<{ lang: Locale }>;
@@ -43,14 +44,14 @@ export default async function NewsIndexPage({ params }: NewsIndexPageProps) {
       <PageHero
         eyebrow={isFr ? "ACTUALITÉS & ÉVÉNEMENTS" : "NEWS & EVENTS"}
         title={
-          isFr
-            ? `Restez au cœur de la vie de ${<CharisName />}`
-            : `Stay Up to Date with Life at ${<CharisName />}`
+          renderBrandText(isFr
+            ? `Restez au cœur de la vie de {{CharisName}}`
+            : `Stay Up to Date with Life at {{CharisName}}`)
         }
         description={
-          isFr
-            ? `Découvrez les dernières actualités, événements, activités et temps forts du Groupe Scolaire Bilingue ${<CharisName />}.`
-            : `Discover the latest news, events, activities and highlights from Groupe Scolaire Bilingue ${<CharisName />}.`
+          renderBrandText(isFr
+            ? `Découvrez les dernières actualités, événements, activités et temps forts du Groupe Scolaire Bilingue {{CharisName}}.`
+            : `Discover the latest news, events, activities and highlights from Groupe Scolaire Bilingue {{CharisName}}.`)
         }
       />
 

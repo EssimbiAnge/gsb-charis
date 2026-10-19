@@ -9,20 +9,53 @@ export default function WhyChooseCharis({ lang }: Props) {
 
   const items = isFr
     ? [
-        ["Excellence académique", "Des apprentissages structurés et une recherche constante de progression."],
-        ["Éducation bilingue", "Des parcours francophone et anglophone de la maternelle au primaire."],
-        ["Pensée critique", "Apprendre à analyser, questionner et rechercher des solutions."],
-        ["Droiture", "Former le caractère, l’intégrité et le sens des responsabilités."],
-        ["Collaboration", "Apprendre à écouter, contribuer et réussir avec les autres."],
-        ["Développement global", "Une éducation qui va au-delà des seules performances académiques."],
+        [
+          "Excellence académique",
+          "Des apprentissages structurés et une recherche constante de progression.",
+        ],
+        [
+          "Éducation bilingue",
+          "Des parcours francophone et anglophone de la maternelle au primaire.",
+        ],
+        [
+          "Pensée critique",
+          "Apprendre à analyser, questionner et rechercher des solutions.",
+        ],
+        [
+          "Droiture",
+          "Former le caractère, l’intégrité et le sens des responsabilités.",
+        ],
+        [
+          "Collaboration",
+          "Apprendre à écouter, contribuer et réussir avec les autres.",
+        ],
+        [
+          "Développement global",
+          "Une éducation qui va au-delà des seules performances académiques.",
+        ],
       ]
     : [
-        ["Academic Excellence", "Structured learning and a constant pursuit of progress."],
-        ["Bilingual Education", "French and English programmes from preschool through primary school."],
-        ["Critical Thinking", "Learning to analyse, question and develop solutions."],
+        [
+          "Academic Excellence",
+          "Structured learning and a constant pursuit of progress.",
+        ],
+        [
+          "Bilingual Education",
+          "French and English programmes from preschool through primary school.",
+        ],
+        [
+          "Critical Thinking",
+          "Learning to analyse, question and develop solutions.",
+        ],
         ["Integrity", "Building character, responsibility and integrity."],
-        ["Collaboration", "Learning to listen, contribute and succeed with others."],
-        ["Whole-child Development", "An education that goes beyond academic performance."],
+        [
+          "Collaboration",
+          "Learning to listen, contribute and succeed with others.",
+        ],
+        [
+          "Whole-child Development",
+          "An education that goes beyond academic performance.",
+        ],
       ];
 
   return (
