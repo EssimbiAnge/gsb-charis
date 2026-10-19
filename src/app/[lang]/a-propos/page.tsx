@@ -63,8 +63,12 @@ export default async function AboutPage({ params }: PageProps) {
         }
         description={
           isFr
-            ? "Le Groupe Scolaire Bilingue CHARIS développe les compétences académiques, le caractère, la pensée critique, la collaboration et la capacité à apporter des solutions."
-            : "Groupe Scolaire Bilingue CHARIS develops academic competence, character, critical thinking, collaboration and the ability to create solutions."
+            ? `Le Groupe Scolaire Bilingue ${(
+                <CharisName />
+              )} développe les compétences académiques, le caractère, la pensée critique, la collaboration et la capacité à apporter des solutions.`
+            : `Groupe Scolaire Bilingue ${(
+                <CharisName />
+              )} develops academic competence, character, critical thinking, collaboration and the ability to create solutions.`
         }
       />
 
@@ -230,8 +234,8 @@ export default async function AboutPage({ params }: PageProps) {
           <div>
             <h2 className="text-4xl font-bold text-blue-950">
               {isFr
-                ? "Découvrez les programmes de CHARIS"
-                : "Discover CHARIS programmes"}
+                ? `Découvrez les programmes de ${(<CharisName />)}`
+                : `Discover ${(<CharisName />)} programmes`}
             </h2>
 
             <p className="mt-3 text-lg text-blue-950">

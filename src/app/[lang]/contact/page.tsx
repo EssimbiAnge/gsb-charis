@@ -1,3 +1,4 @@
+import CharisName from "@/components/CharisName";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
@@ -26,8 +27,8 @@ export default async function ContactPage({ params }: PageProps) {
           }
           description={
             isFr
-              ? "Pour toute question concernant les admissions, les programmes, les partenariats ou la vie scolaire, contactez l’équipe du Groupe Scolaire Bilingue CHARIS."
-              : "For enquiries about admissions, programmes, partnerships or school life, contact the Groupe Scolaire Bilingue CHARIS team."
+              ? `Pour toute question concernant les admissions, les programmes, les partenariats ou la vie scolaire, contactez l’équipe du Groupe Scolaire Bilingue ${<CharisName />}.`
+              : `For enquiries about admissions, programmes, partnerships or school life, contact the Groupe Scolaire Bilingue ${<CharisName />} team.`
           }
         />
 
@@ -46,13 +47,13 @@ export default async function ContactPage({ params }: PageProps) {
 
       <p className="mt-5 leading-8 text-gray-600">
         {isFr
-          ? "Le Groupe Scolaire Bilingue CHARIS est situé au quartier Mont Cameroun, à environ 500 mètres de la Délégation Régionale du Tourisme."
-          : "Groupe Scolaire Bilingue CHARIS is located in the Mont Cameroun neighbourhood, approximately 500 metres from the Regional Delegation of Tourism."}
+          ? `Le Groupe Scolaire Bilingue ${<CharisName />} est situé au quartier Mont Cameroun, à environ 500 mètres de la Délégation Régionale du Tourisme.`
+          : `Groupe Scolaire Bilingue ${<CharisName />} is located in the Mont Cameroun neighbourhood, approximately 500 metres from the Regional Delegation of Tourism.`}
       </p>
 
       <div className="mt-7 rounded-2xl bg-blue-50 p-6">
         <p className="font-bold text-blue-950">
-          Groupe Scolaire Bilingue CHARIS
+          Groupe Scolaire Bilingue <CharisName />
         </p>
 
         <p className="mt-3 leading-7 text-gray-600">
@@ -93,8 +94,8 @@ export default async function ContactPage({ params }: PageProps) {
       <iframe
         title={
           isFr
-            ? "Localisation du Groupe Scolaire Bilingue CHARIS"
-            : "Location of Groupe Scolaire Bilingue CHARIS"
+            ? `Localisation du Groupe Scolaire Bilingue ${<CharisName />}`
+            : `Location of Groupe Scolaire Bilingue ${<CharisName />}`
         }
         src="https://www.google.com/maps?q=4.565200,13.69698&z=16&output=embed"
         width="100%"
@@ -122,8 +123,8 @@ export default async function ContactPage({ params }: PageProps) {
 
               <p className="mt-5 max-w-xl leading-8 text-gray-600">
                 {isFr
-                  ? "Remplissez ce formulaire pour nous adresser votre demande. L’équipe de CHARIS vous répondra dès que possible."
-                  : "Complete this form to send us your enquiry. The CHARIS team will respond as soon as possible."}
+                  ? `Remplissez ce formulaire pour nous adresser votre demande. L’équipe de ${<CharisName />} vous répondra dès que possible.`
+                  : `Complete this form to send us your enquiry. The ${<CharisName />} team will respond as soon as possible.`}
               </p>
 
               <div className="mt-8 rounded-2xl bg-blue-950 p-7 text-white">
@@ -242,7 +243,7 @@ export default async function ContactPage({ params }: PageProps) {
                   </option>
 
                   <option value="soutien">
-                    {isFr ? "Soutenir CHARIS" : "Support CHARIS"}
+                    {isFr ? `Soutenir ${<CharisName />}` : `Support ${<CharisName />}`}
                   </option>
 
                   <option value="autre">
@@ -299,8 +300,8 @@ export default async function ContactPage({ params }: PageProps) {
 
               <p className="mt-5 leading-8 text-gray-600">
                 {isFr
-                  ? "Le Groupe Scolaire Bilingue CHARIS est situé au quartier Mont Cameroun, à environ 500 mètres de la Délégation Régionale du Tourisme."
-                  : "Groupe Scolaire Bilingue CHARIS is located in the Mont Cameroun neighbourhood, approximately 500 metres from the Regional Delegation of Tourism."}
+                  ? `Le Groupe Scolaire Bilingue ${<CharisName />} est situé au quartier Mont Cameroun, à environ 500 mètres de la Délégation Régionale du Tourisme.`
+                  : `Groupe Scolaire Bilingue ${<CharisName />} is located in the Mont Cameroun neighbourhood, approximately 500 metres from the Regional Delegation of Tourism.`}
               </p>
 
               <div className="mt-7 flex flex-wrap gap-4">
@@ -327,7 +328,7 @@ export default async function ContactPage({ params }: PageProps) {
             <div className="flex min-h-[360px] items-center justify-center rounded-2xl bg-blue-50 p-8 text-center">
               <div>
                 <p className="text-lg font-bold text-blue-950">
-                  Groupe Scolaire Bilingue CHARIS
+                  Groupe Scolaire Bilingue <CharisName />
                 </p>
 
                 <p className="mt-3 leading-7 text-gray-600">

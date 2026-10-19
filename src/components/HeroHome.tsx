@@ -45,7 +45,7 @@ export default function HeroHome({ lang }: Props) {
               href={`/${lang}/a-propos`}
               className="rounded-lg border-2 border-white px-7 py-4 font-bold hover:bg-white hover:text-blue-950"
             >
-              {isFr ? "Découvrir CHARIS" : "Discover CHARIS"}
+              {isFr ? `Découvrir ${<CharisName />}` : `Discover ${<CharisName />}`}
             </Link>
           </div>
         </div>
@@ -55,8 +55,8 @@ export default function HeroHome({ lang }: Props) {
             src="/charis-campus.jpg"
             alt={
               isFr
-                ? "Campus du Groupe Scolaire Bilingue CHARIS"
-                : "Groupe Scolaire Bilingue CHARIS campus"
+                ? `Campus du Groupe Scolaire Bilingue ${<CharisName />}`
+                : `Groupe Scolaire Bilingue ${<CharisName />} campus`
             }
             fill
             priority

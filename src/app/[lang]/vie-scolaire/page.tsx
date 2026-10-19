@@ -1,3 +1,4 @@
+import CharisName from "@/components/CharisName";
 import PageHero from "@/components/PageHero";
 import Link from "next/link";
 
@@ -87,8 +88,8 @@ export default async function SchoolLifePage({ params }: PageProps) {
         }
         description={
           isFr
-            ? "À CHARIS, les apprentissages dépassent les salles de classe. Nous voulons développer la personne dans toutes ses dimensions."
-            : "At CHARIS, learning goes beyond the classroom. We aim to develop the whole child."
+            ? `À ${<CharisName />}, les apprentissages dépassent les salles de classe. Nous voulons développer la personne dans toutes ses dimensions.`
+            : `At ${<CharisName />}, learning goes beyond the classroom. We aim to develop the whole child.`
         }
       />
 
@@ -182,8 +183,8 @@ export default async function SchoolLifePage({ params }: PageProps) {
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600">
             {isFr
-              ? "Nous serons heureux de vous accueillir et de vous faire découvrir l'environnement d'apprentissage de CHARIS."
-              : "We would be delighted to welcome you and show you the CHARIS learning environment."}
+              ? `Nous serons heureux de vous accueillir et de vous faire découvrir l'environnement d'apprentissage de ${<CharisName />}.`
+              : `We would be delighted to welcome you and show you the ${<CharisName />} learning environment.`}
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">

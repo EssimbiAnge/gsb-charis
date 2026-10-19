@@ -1,12 +1,11 @@
 import Link from "next/link";
+import CharisName from "./CharisName";
 
 type SchoolLifePreviewProps = {
   lang: "fr" | "en";
 };
 
-export default function SchoolLifePreview({
-  lang,
-}: SchoolLifePreviewProps) {
+export default function SchoolLifePreview({ lang }: SchoolLifePreviewProps) {
   const isFr = lang === "fr";
 
   const activities = isFr
@@ -40,7 +39,9 @@ export default function SchoolLifePreview({
           </p>
 
           <h2 className="mt-3 text-4xl font-bold text-blue-950">
-            {isFr ? "La vie à CHARIS" : "Life at CHARIS"}
+            {isFr
+              ? `La vie à ${(<CharisName />)}`
+              : `Life at ${(<CharisName />)}`}
           </h2>
 
           <p className="mt-5 text-lg leading-8 text-gray-600">
@@ -70,9 +71,7 @@ export default function SchoolLifePreview({
             href={`/${lang}/vie-scolaire`}
             className="inline-block rounded-lg bg-blue-950 px-6 py-3 font-bold text-white transition hover:bg-blue-900"
           >
-            {isFr
-              ? "Découvrir la vie scolaire"
-              : "Discover school life"}
+            {isFr ? "Découvrir la vie scolaire" : "Discover school life"}
           </Link>
         </div>
       </div>

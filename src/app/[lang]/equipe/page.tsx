@@ -3,6 +3,7 @@ import PageHero from "@/components/PageHero";
 import Link from "next/link";
 import { teamRepository } from "@/lib/team/repository";
 import { TeamYearsAccordion } from "@/components/team/team-years-accordion";
+import CharisName from "@/components/CharisName";
 
 interface GalleryPageProps {
   params: Promise<{ lang: Locale }>;
@@ -15,8 +16,8 @@ export async function generateMetadata({ params }: GalleryPageProps) {
   return {
     title: isFr ? `Rencontrez l'équipe` : `Meet the Team`,
     description: isFr
-      ? "Découvrez les enseignants, membres du personnel et responsables qui accompagnent nos élèves, développent leur potentiel et contribuent à faire de CHARIS un environnement où chacun peut apprendre, grandir et s’épanouir."
-      : "Get to know the teachers, staff and administrators who support our students, nurture their potential and help make life at CHARIS a place to learn, grow and thrive.",
+      ? "Découvrez les enseignants, membres du personnel et responsables qui accompagnent nos élèves, développent leur potentiel et contribuent à faire de${<CharisName />} un environnement où chacun peut apprendre, grandir et s’épanouir."
+      : "Get to know the teachers, staff and administrators who support our students, nurture their potential and help make life at${<CharisName />} a place to learn, grow and thrive.",
   };
 }
 
@@ -52,13 +53,13 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
         eyebrow={isFr ? "Rencontrez l'équipe" : "Meet the Team"}
         title={
           isFr
-            ? "Découvrez l’équipe de CHARIS"
-            : "Meet the People Behind CHARIS"
+            ? `Découvrez l’équipe de ${<CharisName />}`
+            : `Meet the People Behind ${<CharisName />}`
         }
         description={
           isFr
-            ? "Découvrez les enseignants, membres du personnel et responsables qui accompagnent nos élèves, développent leur potentiel et contribuent à faire de CHARIS un environnement où chacun peut apprendre, grandir et s’épanouir."
-            : "Get to know the teachers, staff and administrators who support our students, nurture their potential and help make life at CHARIS a place to learn, grow and thrive."
+            ? `Découvrez les enseignants, membres du personnel et responsables qui accompagnent nos élèves, développent leur potentiel et contribuent à faire de ${<CharisName />} un environnement où chacun peut apprendre, grandir et s’épanouir.`
+            : `Get to know the teachers, staff and administrators who support our students, nurture their potential and help make life at ${<CharisName />} a place to learn, grow and thrive.`
         }
       />
 
@@ -94,19 +95,25 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
           <div className="rounded-2xl bg-blue-950 p-8 text-white">
             <h2 className="mt-3 text-3xl font-bold">
               {isFr
-                ? "Rejoignez la communauté CHARIS"
-                : "Be Part of the CHARIS Community"}
+                ? `Rejoignez la communauté ${<CharisName />}`
+                : `Be Part of the ${<CharisName />} Community`}
             </h2>
 
             <p className="mt-5 leading-8 text-blue-100">
               {isFr
-                ? "À CHARIS, nous croyons que les grandes écoles sont bâties par des personnes profondément engagées dans l’éducation et dans l’accompagnement des jeunes. Nous construisons une communauté collaborative où les enseignants et les membres du personnel peuvent mettre leurs compétences, leurs idées et leur expérience au service de la prochaine génération."
-                : `At CHARIS, we believe great schools are built by people who care deeply about education and the young people they serve. We are building a collaborative community where teachers and staff can bring their skills, ideas and experience to the work of shaping the next generation.`}
+                ? `À ${<CharisName />}, nous croyons que les grandes écoles sont bâties par des personnes profondément engagées dans l’éducation et dans l’accompagnement des jeunes. Nous construisons une communauté collaborative où les enseignants et les membres du personnel peuvent mettre leurs compétences, leurs idées et leur expérience au service de la prochaine génération.`
+                : `At ${(
+                    <CharisName />
+                  )}, we believe great schools are built by people who care deeply about education and the young people they serve. We are building a collaborative community where teachers and staff can bring their skills, ideas and experience to the work of shaping the next generation.`}
               <br />
               <br />
               {isFr
-                ? "Travailler à CHARIS, c’est rejoindre une équipe qui valorise la collaboration, la pensée critique et la droiture. Que vous soyez un enseignant expérimenté, un spécialiste passionné ou un professionnel souhaitant mettre ses compétences au service d’une mission éducative, nous accueillons les personnes prêtes à apprendre, à évoluer et à avoir un impact significatif."
-                : `Working at CHARIS means being part of a team that values collaboration, critical thinking and righteousness. Whether you are an experienced educator, a passionate specialist or a dedicated professional looking for an opportunity to contribute, there is a place for people who are ready to learn, grow and make a meaningful impact.`}
+                ? `Travailler à ${(
+                    <CharisName />
+                  )}, c’est rejoindre une équipe qui valorise la collaboration, la pensée critique et la droiture. Que vous soyez un enseignant expérimenté, un spécialiste passionné ou un professionnel souhaitant mettre ses compétences au service d’une mission éducative, nous accueillons les personnes prêtes à apprendre, à évoluer et à avoir un impact significatif.`
+                : `Working at ${(
+                    <CharisName />
+                  )} means being part of a team that values collaboration, critical thinking and righteousness. Whether you are an experienced educator, a passionate specialist or a dedicated professional looking for an opportunity to contribute, there is a place for people who are ready to learn, grow and make a meaningful impact.`}
             </p>
           </div>
 
@@ -153,8 +160,8 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
           <div>
             <h2 className="text-4xl font-bold text-blue-950">
               {isFr
-                ? "Rejoignez la communauté CHARIS"
-                : "Be Part of the CHARIS Community"}
+                ? `Rejoignez la communauté ${(<CharisName />)}`
+                : `Be Part of the ${(<CharisName />)} Community`}
             </h2>
 
             <p className="mt-3 text-lg text-blue-950">

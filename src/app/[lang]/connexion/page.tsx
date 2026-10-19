@@ -1,3 +1,4 @@
+import CharisName from "@/components/CharisName";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LoginPanel from "@/components/LoginPanel";
@@ -21,8 +22,8 @@ export default async function LoginPage({ params }: PageProps) {
         eyebrow={isFr ? "Espace sécurisé" : "Secure Portal"}
         title={
           isFr
-            ? "Connectez-vous à votre espace CHARIS"
-            : "Sign in to your CHARIS portal"
+            ? `Connectez-vous à votre espace ${(<CharisName />)}`
+            : `Sign in to your ${(<CharisName />)} portal`
         }
         description={
           isFr

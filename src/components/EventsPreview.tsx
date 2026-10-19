@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CharisName from "./CharisName";
 
 type Props = {
   lang: "fr" | "en";
@@ -21,15 +22,22 @@ export default function EventsPreview({ lang }: Props) {
             </h2>
           </div>
 
-          <Link href={`/${lang}/evenements`} className="font-bold text-orange-600">
+          <Link
+            href={`/${lang}/evenements`}
+            className="font-bold text-orange-600"
+          >
             {isFr ? "Voir tous les événements →" : "View all events →"}
           </Link>
         </div>
 
         <p className="mt-8 text-gray-600">
           {isFr
-            ? "Les prochains événements et temps forts du Groupe Scolaire Bilingue CHARIS seront présentés ici."
-            : "Upcoming events and highlights from Groupe Scolaire Bilingue CHARIS will appear here."}
+            ? `Les prochains événements et temps forts du Groupe Scolaire Bilingue ${(
+                <CharisName />
+              )} seront présentés ici.`
+            : `Upcoming events and highlights from Groupe Scolaire Bilingue ${(
+                <CharisName />
+              )} will appear here.`}
         </p>
       </div>
     </section>

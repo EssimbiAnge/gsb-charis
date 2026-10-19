@@ -90,7 +90,7 @@ export default function Footer({ lang }: FooterProps) {
       </div>
 
       <div className="border-t border-slate-800 py-5 text-center text-sm text-slate-400">
-        © {new Date().getFullYear()} Groupe Scolaire Bilingue CHARIS.{" "}
+        © {new Date().getFullYear()} Groupe Scolaire Bilingue <CharisName />.{" "}
         {isFr ? "Tous droits réservés." : "All rights reserved."}
       </div>
     </footer>

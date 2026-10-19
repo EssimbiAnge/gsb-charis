@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import Header from "@/components/Header";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import CharisName from "@/components/CharisName";
 
 interface GalleryPageProps {
   params: Promise<{ lang: Locale }>;
@@ -25,8 +26,8 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
         eyebrow={isFr ? "Notre galerie" : "Our Gallery"}
         title={
           isFr
-            ? "Découvrez la vie au Groupe Scolaire Bilingue CHARIS"
-            : "Discover life at Groupe Scolaire Bilingue CHARIS"
+            ? `Découvrez la vie au Groupe Scolaire Bilingue ${(<CharisName />)}`
+            : `Discover life at Groupe Scolaire Bilingue ${(<CharisName />)}`
         }
         description={
           isFr
@@ -38,7 +39,9 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
       <section className="bg-white px-6 py-16">
         <div className="mx-auto max-w-7xl text-center">
           <p className="font-bold uppercase tracking-widest text-orange-500">
-            {isFr ? "CHARIS en images" : "CHARIS in Pictures"}
+            {isFr
+              ? `${(<CharisName />)} en images`
+              : `${(<CharisName />)} in Pictures`}
           </p>
 
           <h2 className="mt-3 text-4xl font-bold text-blue-950">
@@ -124,8 +127,8 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
           <div>
             <h2 className="text-4xl font-bold text-blue-950">
               {isFr
-                ? "Vous souhaitez découvrir CHARIS ?"
-                : "Would you like to discover CHARIS?"}
+                ? `Vous souhaitez découvrir ${(<CharisName />)} ?`
+                : `Would you like to discover ${(<CharisName />)}?`}
             </h2>
 
             <p className="mt-3 text-lg text-blue-950">

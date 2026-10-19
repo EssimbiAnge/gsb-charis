@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
+import CharisName from "./CharisName";
 
 type Lang = "fr" | "en";
 
@@ -57,8 +58,7 @@ const supportOptions: Record<SupportCategory, SupportOption[]> = {
       titleEn: "Equip a classroom",
       descriptionFr:
         "Financer du mobilier, du matériel pédagogique ou des équipements numériques.",
-      descriptionEn:
-        "Fund furniture, teaching materials or digital equipment.",
+      descriptionEn: "Fund furniture, teaching materials or digital equipment.",
     },
     {
       id: "school-activities",
@@ -96,17 +96,18 @@ const supportOptions: Record<SupportCategory, SupportOption[]> = {
       titleEn: "Train leaders",
       descriptionFr:
         "Financer des formations destinées aux enseignants, éducateurs et jeunes leaders.",
-      descriptionEn:
-        "Fund training for teachers, educators and young leaders.",
+      descriptionEn: "Fund training for teachers, educators and young leaders.",
     },
     {
       id: "community-projects",
       titleFr: "Développer les communautés",
       titleEn: "Develop communities",
-      descriptionFr:
-        "Soutenir les initiatives éducatives, sociales et communautaires de CHARIS.",
-      descriptionEn:
-        "Support CHARIS educational, social and community initiatives.",
+      descriptionFr: `Soutenir les initiatives éducatives, sociales et communautaires de ${(
+        <CharisName />
+      )}.`,
+      descriptionEn: `Support ${(
+        <CharisName />
+      )} educational, social and community initiatives.`,
     },
   ],
 };
@@ -136,9 +137,7 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
     return `CHARIS-${datePart}-${randomPart}`;
   }, []);
 
-  const finalAmount = customAmount
-    ? Number(customAmount)
-    : selectedAmount ?? 0;
+  const finalAmount = customAmount ? Number(customAmount) : selectedAmount ?? 0;
 
   const currentOptions = supportOptions[category];
 
@@ -171,8 +170,8 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
 
             <h2 className="mt-3 text-4xl font-bold text-blue-950">
               {isFr
-                ? "Trois manières de soutenir CHARIS"
-                : "Three ways to support CHARIS"}
+                ? `Trois manières de soutenir ${(<CharisName />)}`
+                : `Three ways to support ${(<CharisName />)}`}
             </h2>
           </div>
 
@@ -281,9 +280,7 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
                       name="cause"
                       value={option.id}
                       checked={selectedCause === option.id}
-                      onChange={(event) =>
-                        setSelectedCause(event.target.value)
-                      }
+                      onChange={(event) => setSelectedCause(event.target.value)}
                       className="mt-1 h-5 w-5"
                     />
 
@@ -293,9 +290,7 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
                       </h3>
 
                       <p className="mt-2 leading-7 text-gray-600">
-                        {isFr
-                          ? option.descriptionFr
-                          : option.descriptionEn}
+                        {isFr ? option.descriptionFr : option.descriptionEn}
                       </p>
                     </div>
                   </div>
@@ -360,9 +355,7 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
               </p>
 
               <h2 className="mt-3 text-3xl font-bold">
-                {isFr
-                  ? "Effectuez votre transfert"
-                  : "Make Your Transfer"}
+                {isFr ? "Effectuez votre transfert" : "Make Your Transfer"}
               </h2>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -404,7 +397,7 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
                   </p>
 
                   <p className="mt-1 font-bold">
-                    GROUPE SCOLAIRE BILINGUE CHARIS
+                    GROUPE SCOLAIRE BILINGUE <CharisName />
                   </p>
                 </div>
 
@@ -432,7 +425,9 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
 
                 <div>
                   <p className="text-sm text-blue-200">
-                    {isFr ? "Référence CHARIS" : "CHARIS Reference"}
+                    {isFr
+                      ? `Référence ${(<CharisName />)}`
+                      : `${(<CharisName />)} Reference`}
                   </p>
 
                   <p className="mt-1 break-all font-bold text-orange-400">
@@ -461,30 +456,28 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
         <div className="mx-auto max-w-4xl">
           <div className="text-center">
             <p className="font-bold uppercase tracking-widest text-orange-500">
-              {isFr
-                ? "Déclaration de transaction"
-                : "Transaction Declaration"}
+              {isFr ? "Déclaration de transaction" : "Transaction Declaration"}
             </p>
 
             <h2 className="mt-3 text-4xl font-bold text-blue-950">
-              {isFr
-                ? "Déclarez votre paiement"
-                : "Declare Your Payment"}
+              {isFr ? "Déclarez votre paiement" : "Declare Your Payment"}
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl leading-8 text-gray-600">
               {isFr
-                ? "Votre soutien sera confirmé après vérification de la transaction dans le compte marchand officiel de CHARIS."
-                : "Your support will be confirmed after the transaction has been verified in the official CHARIS merchant account."}
+                ? `Votre soutien sera confirmé après vérification de la transaction dans le compte marchand officiel de ${(
+                    <CharisName />
+                  )}.`
+                : `Your support will be confirmed after the transaction has been verified in the official ${(
+                    <CharisName />
+                  )} merchant account.`}
             </p>
           </div>
 
           {submitted ? (
             <div className="mt-10 rounded-2xl border border-green-300 bg-green-50 p-8 text-center">
               <h3 className="text-2xl font-bold text-green-800">
-                {isFr
-                  ? "Déclaration enregistrée"
-                  : "Declaration Recorded"}
+                {isFr ? "Déclaration enregistrée" : "Declaration Recorded"}
               </h3>
 
               <p className="mt-4 leading-7 text-green-700">
@@ -493,9 +486,7 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
                   : "Thank you for your support. Our team will verify the payment with the operator before final confirmation."}
               </p>
 
-              <p className="mt-4 font-bold text-green-900">
-                {reference}
-              </p>
+              <p className="mt-4 font-bold text-green-900">{reference}</p>
             </div>
           ) : (
             <form
@@ -622,8 +613,12 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
 
                 <p className="mt-2 leading-7 text-red-700">
                   {isFr
-                    ? "Ne communiquez jamais votre code secret MTN MoMo ou Orange Money. CHARIS ne vous demandera jamais ce code."
-                    : "Never share your MTN MoMo or Orange Money secret code. CHARIS will never ask you for it."}
+                    ? `Ne communiquez jamais votre code secret MTN MoMo ou Orange Money. ${(
+                        <CharisName />
+                      )} ne vous demandera jamais ce code.`
+                    : `Never share your MTN MoMo or Orange Money secret code. ${(
+                        <CharisName />
+                      )} will never ask you for it.`}
                 </p>
               </div>
 
@@ -632,9 +627,7 @@ export default function SupportPayment({ lang }: SupportPaymentProps) {
                 disabled={!selectedCause || !operator || finalAmount <= 0}
                 className="mt-8 w-full rounded-lg bg-orange-500 px-6 py-4 font-bold text-white transition hover:bg-orange-600 disabled:cursor-not-allowed disabled:bg-gray-400"
               >
-                {isFr
-                  ? "Enregistrer ma déclaration"
-                  : "Submit My Declaration"}
+                {isFr ? "Enregistrer ma déclaration" : "Submit My Declaration"}
               </button>
             </form>
           )}

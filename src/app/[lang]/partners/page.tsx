@@ -3,6 +3,7 @@ import { PartnerCard } from "@/components/partners/partner-card";
 import type { Locale } from "@/lib/news/types";
 import PageHero from "@/components/PageHero";
 import SupportSection from "@/components/SupportSection";
+import CharisName from "@/components/CharisName";
 
 interface PartnersPageProps {
   params: Promise<{ lang: Locale }>;
@@ -31,8 +32,12 @@ export default async function PartnersPage({ params }: PartnersPageProps) {
         eyebrow={isFr ? "Nos Partenaires" : "Our Partners"}
         title={
           lang === "fr"
-            ? "Les organisations qui collaborent avec le Groupe Scolaire Bilingue CHARIS."
-            : "The organizations that work with CHARIS Bilingual School Complex."
+            ? `Les organisations qui collaborent avec le Groupe Scolaire Bilingue ${(
+                <CharisName />
+              )}.`
+            : `The organizations that work with ${(
+                <CharisName />
+              )} Bilingual School Complex.`
         }
       />
 

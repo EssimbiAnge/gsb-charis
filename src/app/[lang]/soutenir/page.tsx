@@ -1,3 +1,4 @@
+import CharisName from "@/components/CharisName";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
@@ -18,7 +19,7 @@ export default async function SupportPage({ params }: PageProps) {
   return (
     <>
       <PageHero
-        eyebrow={isFr ? "Soutenir CHARIS" : "Support CHARIS"}
+        eyebrow={isFr ? `Soutenir ${<CharisName />}` : `Support ${<CharisName />}`}
         title={
           isFr
             ? "Ensemble, transformons des vies par l’éducation"
@@ -26,8 +27,8 @@ export default async function SupportPage({ params }: PageProps) {
         }
         description={
           isFr
-            ? "Votre contribution peut soutenir un enfant, développer notre école ou accompagner la mission éducative et communautaire de CHARIS."
-            : "Your contribution can support a child, develop our school or strengthen the educational and community mission of CHARIS."
+            ? `Votre contribution peut soutenir un enfant, développer notre école ou accompagner la mission éducative et communautaire de ${<CharisName />}.`
+            : `Your contribution can support a child, develop our school or strengthen the educational and community mission of ${<CharisName />}.`
         }
       />
 

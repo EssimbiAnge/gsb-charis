@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CharisName from "./CharisName";
 
 type ContactCTAProps = {
   lang: "fr" | "en";
@@ -12,7 +13,7 @@ export default function ContactCTA({ lang }: ContactCTAProps) {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 lg:flex-row">
         <div className="text-center lg:text-left">
           <h2 className="text-4xl font-bold text-blue-950">
-            {isFr ? "Prêt à rejoindre CHARIS ?" : "Ready to join CHARIS?"}
+            {isFr ? `Prêt à rejoindre ${<CharisName />} ?` : `Ready to join ${<CharisName />}?`}
           </h2>
 
           <p className="mt-3 max-w-2xl text-lg leading-8 text-blue-950">
