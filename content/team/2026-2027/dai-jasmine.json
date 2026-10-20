@@ -1,0 +1,16 @@
+{
+    "slug": "dai-jasmine",
+    "name": "Mme Daï Jasmine",
+    "group": "teacher",
+    "roleTitle": {
+        "en": "Class 2 Teacher",
+        "fr": "Titulaire Class 2"
+    },
+    "photo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/team_profiles/mme-dai.jpeg",
+    "bio": {
+        "en": "Guides Class 2 pupils as they grow in reading, writing and numeracy, encouraging curiosity in every lesson.",
+        "fr": "Accompagne les élèves de Class 2 dans leurs progrès en lecture, écriture et calcul, en cultivant leur curiosité à chaque leçon."
+    },
+    "contacts": [],
+    "order": 11
+}

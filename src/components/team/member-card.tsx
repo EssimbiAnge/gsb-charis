@@ -48,7 +48,7 @@ export function MemberCard({ member, locale }: MemberCardProps) {
           src={member.photo}
           alt={member.name}
           fill
-          className="object-cover"
+          className="object-cover object-top"
         />
       </div>
       <div className="mt-3">

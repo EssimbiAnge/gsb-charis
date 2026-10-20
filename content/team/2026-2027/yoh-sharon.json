@@ -1,0 +1,16 @@
+{
+    "slug": "yoh-sharon",
+    "name": "Mme Sharon Yoh",
+    "group": "teacher",
+    "roleTitle": {
+        "en": "Nursery 1 Teacher",
+        "fr": "Titulaire Nursery 1"
+    },
+    "photo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/team_profiles/mme-sharon.jpeg",
+    "bio": {
+        "en": "Welcomes our youngest pupils and nurtures their early learning through play, songs and daily routines.",
+        "fr": "Accueille nos plus jeunes élèves et favorise leurs premiers apprentissages à travers le jeu, les chansons et les routines quotidiennes."
+    },
+    "contacts": [],
+    "order": 8
+}

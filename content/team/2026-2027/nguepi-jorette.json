@@ -1,0 +1,21 @@
+{
+    "slug": "nguepi-jorette",
+    "name": "Mme Nguepi Sanfouo Jorette",
+    "group": "teacher",
+    "roleTitle": {
+        "en": "CM1 Teacher",
+        "fr": "Titulaire CM1"
+    },
+    "photo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/team_profiles/mme-nguepi.jpeg",
+    "bio": {
+        "en": "Prepares CM1 pupils for upper-primary work, building strong foundations in French and mathematics.",
+        "fr": "Prépare les élèves de CM1 au cycle supérieur du primaire, en consolidant leurs bases en français et en mathématiques."
+    },
+    "contacts": [
+        {
+            "type": "email",
+            "value": "nguepiesafouojorette@gmail.com"
+        }
+    ],
+    "order": 5
+}

@@ -1,0 +1,16 @@
+{
+    "slug": "mabel-fulai",
+    "name": "Mme Mabel Fulai",
+    "group": "teacher",
+    "roleTitle": {
+        "en": "Nursery 2 Teacher & Nursery Section Head",
+        "fr": "Titulaire Nursery 2 et Responsable de la Section Nursery"
+    },
+    "photo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/team_profiles/mme-mabel.jpeg",
+    "bio": {
+        "en": "Teaches Nursery 2 and leads the nursery section, coordinating the early-years team and supporting young learners' first steps in school.",
+        "fr": "Enseigne en Nursery 2 et dirige la section Nursery, en coordonnant l'équipe de la petite enfance et en accompagnant les premiers pas des jeunes élèves à l'école."
+    },
+    "contacts": [],
+    "order": 7
+}
