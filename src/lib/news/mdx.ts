@@ -110,4 +110,30 @@ export const mdxArticleRepository: ArticleRepository = {
         return rankDiff !== 0 ? rankDiff : (a.publishedAt < b.publishedAt ? 1 : -1);
       });
   },
+
+  async getDrafts(locale) {
+    const dir = localeDir(locale);
+    if (!fs.existsSync(dir)) return [];
+
+    return fs
+      .readdirSync(dir)
+      .filter((f) => f.endsWith(".mdx"))
+      .map((f) => readArticleFile(f.replace(/\.mdx$/, ""), locale))
+      .filter((r): r is NonNullable<typeof r> => r !== null && r.frontmatter.draft)
+      .map(({ content, frontmatter }) => ({
+        ...frontmatter,
+        readingMinutes: Math.ceil(readingTime(content).minutes),
+      }))
+      .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
+  },
+
+  async getDraftBySlug(locale, slug) {
+    const result = readArticleFile(slug, locale);
+    if (!result || !result.frontmatter.draft) return null;
+    return {
+      ...result.frontmatter,
+      content: result.content,
+      readingMinutes: Math.ceil(readingTime(result.content).minutes),
+    };
+  },
 };

@@ -13,6 +13,8 @@ export interface ArticleCardProps {
   locale: Locale;
   /** `"large"` renders a bigger image/title — use for the lead article and featured spots. */
   size?: "default" | "large";
+  /** Overrides the default `/[lang]/news/[slug]` link, e.g. for the drafts preview. */
+  href?: string;
 }
 
 /**
@@ -23,6 +25,7 @@ export function ArticleCard({
   article,
   locale,
   size = "default",
+  href,
 }: ArticleCardProps) {
   const formattedDate = new Date(article.publishedAt).toLocaleDateString(
     locale === "fr" ? "fr-FR" : "en-GB",
@@ -31,7 +34,7 @@ export function ArticleCard({
 
   return (
     <Link
-      href={`/${locale}/actualites/${article.slug}`}
+      href={href ?? `/${locale}/actualites/${article.slug}`}
       className="group block"
     >
       {article.coverImage && (

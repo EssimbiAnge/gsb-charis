@@ -24,6 +24,11 @@ export interface ArticleRepository {
   getAllSlugs(): Promise<string[]>;
   /** Returns currently-active announcements for a locale, most urgent/newest first. */
   getActiveAnnouncements(locale: Locale): Promise<ArticleSummary[]>;
+
+  /** Returns unpublished (`draft: true`) summaries for a locale, newest first. For the private drafts page only. */
+  getDrafts(locale: Locale): Promise<ArticleSummary[]>;
+  /** Returns one draft by slug, or `null` if it doesn't exist or is already published. */
+  getDraftBySlug(locale: Locale, slug: string): Promise<Article | null>;
 }
 
 /**

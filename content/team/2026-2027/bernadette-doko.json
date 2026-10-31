@@ -1,0 +1,16 @@
+{
+    "slug": "bernadette-doko",
+    "name": "Mme Gbae Bernadette Doko",
+    "group": "teacher",
+    "roleTitle": {
+        "en": "Class 5/6 Teacher",
+        "fr": "Titulaire Class 5/6"
+    },
+    "photo": "https://pub-e7da03db1ea14127b211181d60918407.r2.dev/2026/team_profiles/mme-bernadette.jpeg",
+    "bio": {
+        "en": "Leads the joint Class 5 and 6 classroom, helping pupils build confidence and independence as they near the end of primary school.",
+        "fr": "Dirige la classe commune de Class 5 et Class 6, en aidant les élèves à gagner en confiance et en autonomie à l'approche de la fin du primaire."
+    },
+    "contacts": [],
+    "order": 16
+}

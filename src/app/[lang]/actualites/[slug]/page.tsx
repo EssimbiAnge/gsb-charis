@@ -10,6 +10,7 @@ import {
   renderBrandText,
   stripBrandMarker,
 } from "@/components/content/brand-text";
+import { ArticleView } from "@/components/content/article-view";
 
 interface NewsArticlePageProps {
   params: Promise<{ lang: Locale; slug: string }>;
@@ -61,7 +62,9 @@ export default async function NewsArticlePage({
         description={renderBrandText(article.excerpt)}
       />
 
-      <article className="mx-auto max-w-3xl px-4 py-10">
+      <ArticleView article={article} locale={lang} />
+
+      {/* <article className="mx-auto max-w-3xl px-4 py-10">
         <div className="mt-8">
           <MDXRemote
             source={article.content}
@@ -89,14 +92,14 @@ export default async function NewsArticlePage({
           />
           <ArticleMeta
             subtitle={lang === "fr" ? "Publié par" : "Published by"}
-            title={article.author}
+                title={article.author}
           />
           <ArticleMeta
             subtitle={lang === "fr" ? "Catégorie" : "Category"}
             title={article.category}
           />
-        </div>
-      </article>
+        </div>  
+      </article> */}
 
       {moreArticles.length > 0 && (
         <section className="bg-gray-100 px-6 py-20">
